@@ -258,6 +258,15 @@ p{
         padding-top: 30px;
     }
 
+    .general-section {
+        background-image: url(../img/privacy_policy.png);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-bottom:10px;
+        padding-top: 30px;
+    }
+
 /* Estilo para la seccion de servicios */
 /* Estilos carousel */
   .slider2 {

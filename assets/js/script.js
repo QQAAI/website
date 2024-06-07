@@ -35,6 +35,42 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
+    // Cargar el contenido del cta-section.html en la sección con id "cta-section"
+    var ctaContainer = document.getElementById('cta-home');
+    var xhr = new XMLHttpRequest();
+    
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                ctaContainer.innerHTML = xhr.responseText;
+            } else {
+                console.error('Error al cargar el cta: ' + xhr.status);
+            }
+        }
+    };
+    xhr.open('GET', 'assets/partials/cta-home.html', true);
+    xhr.send();
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Cargar el contenido del cta-section.html en la sección con id "cta-section"
+    var ctaContainer = document.getElementById('content-creator-home');
+    var xhr = new XMLHttpRequest();
+    
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                ctaContainer.innerHTML = xhr.responseText;
+            } else {
+                console.error('Error al cargar el cta: ' + xhr.status);
+            }
+        }
+    };
+    xhr.open('GET', 'assets/partials/content-creator-home.html', true);
+    xhr.send();
+});
+
+document.addEventListener('DOMContentLoaded', function () {
     // Cargar el contenido del footer.html en la sección con id "footer"
     var footerContainer = document.getElementById('footer');
     var xhr = new XMLHttpRequest();
