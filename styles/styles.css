@@ -452,6 +452,14 @@ p{
     color: #9E9E9E; /* Cambia el color según tus preferencias */
 }
 
+.film {
+    width: 180px;
+    position: absolute;
+    top: 400 px;
+    left: 500px;
+    z-index: 999;    
+}
+
 
 
 
