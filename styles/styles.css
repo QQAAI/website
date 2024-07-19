@@ -1,6 +1,10 @@
 
 /* Estilos globales */
 
+.legal strong {
+    color: #ffdd03;
+}
+
 .legal {
     color: white;
 }
