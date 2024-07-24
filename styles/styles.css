@@ -418,6 +418,7 @@ p{
 .timeline-slider h3{
     color: #ffffff;
     font-size:18px;
+    text-align: center;
 }
 
 .timeline-slider h4{
@@ -477,6 +478,25 @@ p{
     border-radius: 15px;
     padding: 20px;
     margin: 30px;
+}
+
+.feature {
+    background-color:#5B5526 ;
+    padding: 20px 5px 10px 5px;
+    border-radius: 0px 0px 20px 20px;
+    margin-top: -10px;
+}
+
+.feature h3 {
+    color: #EED21B;
+    font-weight: 700;
+}
+
+.timeline {
+    display: none;
+}
+.timeline.active {
+    display: block;
 }
 
 

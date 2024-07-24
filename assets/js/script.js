@@ -240,3 +240,13 @@ document.addEventListener('DOMContentLoaded', function () {
     xhr.send();
 });
 
+
+        document.getElementById('btnQuickInsights').addEventListener('click', function() {
+            document.getElementById('timelinetwo').classList.add('active');
+            document.getElementById('timelineone').classList.remove('active');
+        });
+
+        document.getElementById('btnWithoutInsights').addEventListener('click', function() {
+            document.getElementById('timelinetwo').classList.remove('active');
+            document.getElementById('timelineone').classList.add('active');
+        });
