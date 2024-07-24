@@ -457,13 +457,27 @@ p{
 }
 
 .film {
-    width: 180px;
-    position: absolute;
-    top: 400 px;
-    left: 500px;
+    width:160px;
+    position:absolute;
+    top: 243px;
+    left: 39%;
     z-index: 999;    
 }
 
+.content {
+    width: 290px;
+    position:absolute;
+    top: 262px;
+    left: 70%;
+    z-index:1;    
+}
+
+.mainContainer {
+    background-color:rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 30px;
+}
 
 
 
@@ -494,6 +508,24 @@ p{
         .home-section {
             height: 800px;
         }
+
+        .film {
+            width:160px;
+            position:absolute;
+            top: 243px;
+            left: 39%;
+            z-index: 999;    
+        }
+        
+        .content {
+            width: 290px;
+            position:absolute;
+            top: 262px;
+            left: 70%;
+            z-index:1;    
+        }
+
+   
     }
 
     @media (max-width: 1440px) { 
@@ -535,6 +567,30 @@ p{
             font-size:16px;
             font-weight: 700;
         }
+
+        .film {
+            width: 160px;
+            position:absolute;
+            top: 270px;
+            left: 35%;
+            z-index: 999;    
+        }
+        
+        .content {
+            width: 290px;
+            position:absolute;
+            top: 290px;
+            left: 77%;
+            z-index:1;    
+        }
+
+        .filmContent {
+            height:330px;
+        }
+
+        .creatorsContent {
+            height:330px;
+        }
     }
 
     @media (max-width: 1200px) {  
@@ -567,6 +623,38 @@ p{
             width: 764px; /* Ajusta el ancho según tus necesidades */
             height: 368px; /* Ajusta la altura según tus necesidades */
             margin: auto;
+        }
+
+        .film {
+            width: 140px;
+            position:absolute;
+            top: 308px;
+            left: 33%;
+            z-index: 999;    
+        }
+        
+        .content {
+            width: 260px;
+            position:absolute;
+            top: 320px;
+            left: 75%;
+            z-index:1;    
+        } 
+
+        .filmContent {
+            height:330px;
+        }
+
+        .creatorsContent {
+            height:330px;
+        }
+
+        .filmContent h1{
+            font-size: 32px;
+        }
+
+        .creatorsContent h1{
+            font-size: 32px;
         }
     
     }
@@ -606,7 +694,25 @@ p{
     .home-section {
         height: 730px;
     }
+
+    .film {
+        width: 160px;
+        position:absolute;
+        top: 262px;
+        left: 70%;
+        z-index: 999;    
     }
+    
+    .content {
+        width: 260px;
+        position:absolute;
+        top: 1500px;
+        left: 60%;
+        z-index:1;    
+    } 
+    }
+
+
 
     @media (max-width: 768px) {
     /* Estilo resmopsives para la primera seccion */   
@@ -649,6 +755,7 @@ p{
         height: 666px; /* Ajusta la altura según tus necesidades */
         margin: auto;
     }
+
 }
 
     @media (max-width: 576px) {
@@ -747,6 +854,19 @@ p{
         width: 375px; /* Ajusta el ancho según tus necesidades */
         height: 514px; /* Ajusta la altura según tus necesidades */
         margin: auto;
+    }
+
+    .filmContent {
+        height:300px;
+    }
+
+    .creatorsContent {
+        height:330px;
+    }
+
+    .mainContainer {
+        padding: 20px 0px 20px 0px;
+        margin: 0px 0px 20px 0px;
     }
 }
 
