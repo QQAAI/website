@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Incrementa el índice actual y vuelve a 0 si es mayor que el número de imágenes
         currentIndex = (currentIndex + 1) % images.length;
-    }, 3000);  // Cambia cada 3 segundos (ajusta el tiempo según tus necesidades)
+    }, 7000);  // Cambia cada 3 segundos (ajusta el tiempo según tus necesidades)
 });
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Incrementa el índice actual y vuelve a 0 si es mayor que el número de imágenes
         currentIndex = (currentIndex + 1) % images.length;
-    }, 3000);  // Cambia cada 3 segundos (ajusta el tiempo según tus necesidades)
+    }, 7000);  // Cambia cada 3 segundos (ajusta el tiempo según tus necesidades)
 });
 
 document.addEventListener('DOMContentLoaded', function () {
