@@ -35,6 +35,42 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
+    // Cargar el contenido del cta-section-gamer.html en la sección con id "cta-section-gamer"
+    var ctaContainer = document.getElementById('cta-section-gamer');
+    var xhr = new XMLHttpRequest();
+    
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                ctaContainer.innerHTML = xhr.responseText;
+            } else {
+                console.error('Error al cargar el cta: ' + xhr.status);
+            }
+        }
+    };
+    xhr.open('GET', 'assets/partials/cta-section-gamer.html', true);
+    xhr.send();
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Cargar el contenido del steper-gamer.html en la sección con id "steper-gamer"
+    var ctaContainer = document.getElementById('steper-gamer');
+    var xhr = new XMLHttpRequest();
+    
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                ctaContainer.innerHTML = xhr.responseText;
+            } else {
+                console.error('Error al cargar el cta: ' + xhr.status);
+            }
+        }
+    };
+    xhr.open('GET', 'assets/partials/steper-gamer.html', true);
+    xhr.send();
+});
+
+document.addEventListener('DOMContentLoaded', function () {
     // Cargar el contenido del cta-section.html en la sección con id "cta-section"
     var ctaContainer = document.getElementById('cta-home');
     var xhr = new XMLHttpRequest();
@@ -147,6 +183,24 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     };
     xhr.open('GET', 'assets/partials/value.html', true);
+    xhr.send();
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Cargar el contenido del value-gamer.html en la sección con id "value-gamer"
+    var valueContainer = document.getElementById('value-gamer');
+    var xhr = new XMLHttpRequest();
+    
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                valueContainer.innerHTML = xhr.responseText;
+            } else {
+                console.error('Error al cargar el value: ' + xhr.status);
+            }
+        }
+    };
+    xhr.open('GET', 'assets/partials/value-gamer.html', true);
     xhr.send();
 });
 
