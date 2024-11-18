@@ -753,21 +753,21 @@ p{
     .detail1 {
         width: 140px;
         position: absolute;
-        top: 350px;
+        top: 400px;
         left: 70%;   
     }
 
     .detail2 {
         width: 140px;
         position: absolute;
-        top: 510px;
+        top: 580px;
         left: 70%;   
     }
 
     .detail3 {
         width: 140px;
         position: absolute;
-        top: 530px;
+        top: 600px;
         left: 8%;   
     }
     
@@ -855,23 +855,23 @@ p{
     }
 
     .detail1 {
-        width: 100px;
+        width: 90px;
         position: absolute;
-        top: 465px;
+        top: 535px;
         left: 70%;   
     }
 
     .detail2 {
-        width: 100px;
+        width: 90px;
         position: absolute;
-        top: 580px;
+        top: 660px;
         left: 70%;   
     }
 
     .detail3 {
-        width: 100px;
+        width: 90px;
         position: absolute;
-        top: 580px;
+        top: 670px;
         left: 8%;   
     }
     
