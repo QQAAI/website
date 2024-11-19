@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
     };
-    xhr.open("GET", "assets/partials/navbar.html", true);
+    xhr.open("GET", "/assets/partials/navbar.html", true);
     xhr.send();
 });
 
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     };
-    xhr.open('GET', 'assets/partials/cta-section-gamer.html', true);
+    xhr.open('GET', '/assets/partials/cta-section-gamer.html', true);
     xhr.send();
 });
 
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     };
-    xhr.open('GET', 'assets/partials/steper-gamer.html', true);
+    xhr.open('GET', '/assets/partials/steper-gamer.html', true);
     xhr.send();
 });
 
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     };
-    xhr.open('GET', 'assets/partials/footer.html', true);
+    xhr.open('GET', '/assets/partials/footer.html', true);
     xhr.send();
 });
 
@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     };
-    xhr.open('GET', 'assets/partials/value-gamer.html', true);
+    xhr.open('GET', '/assets/partials/value-gamer.html', true);
     xhr.send();
 });
 
@@ -290,7 +290,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     };
-    xhr.open('GET', 'assets/partials/contac-us.html', true);
+    xhr.open('GET', '/assets/partials/contac-us.html', true);
     xhr.send();
 });
 
