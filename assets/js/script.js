@@ -294,13 +294,33 @@ document.addEventListener('DOMContentLoaded', function () {
     xhr.send();
 });
 
+document.getElementById('btnQuickInsights').addEventListener('click', function () {
+    // Mostrar la línea de tiempo correspondiente
+    document.getElementById('timelinetwo').classList.add('active');
+    document.getElementById('timelineone').classList.remove('active');
 
-        document.getElementById('btnQuickInsights').addEventListener('click', function() {
-            document.getElementById('timelinetwo').classList.add('active');
-            document.getElementById('timelineone').classList.remove('active');
-        });
+    // Actualizar el estado visual de los botones
+    document.getElementById('btnQuickInsights').classList.add('pressed');
+    document.getElementById('btnWithoutInsights').classList.remove('pressed');
+});
 
-        document.getElementById('btnWithoutInsights').addEventListener('click', function() {
-            document.getElementById('timelinetwo').classList.remove('active');
-            document.getElementById('timelineone').classList.add('active');
-        });
+document.getElementById('btnWithoutInsights').addEventListener('click', function () {
+    // Mostrar la línea de tiempo correspondiente
+    document.getElementById('timelinetwo').classList.remove('active');
+    document.getElementById('timelineone').classList.add('active');
+
+    // Actualizar el estado visual de los botones
+    document.getElementById('btnWithoutInsights').classList.add('pressed');
+    document.getElementById('btnQuickInsights').classList.remove('pressed');
+});
+
+
+//document.getElementById('btnQuickInsights').addEventListener('click', function() {
+//    document.getElementById('timelinetwo').classList.add('active');
+//    document.getElementById('timelineone').classList.remove('active');
+//});
+
+//document.getElementById('btnWithoutInsights').addEventListener('click', function() {
+//    document.getElementById('timelinetwo').classList.remove('active');
+//    document.getElementById('timelineone').classList.add('active');
+//});

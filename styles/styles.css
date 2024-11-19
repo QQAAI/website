@@ -1,6 +1,11 @@
 
 /* Estilos globales */
 
+.btn-info.pressed {
+    background-color: #FF019B; /* Cambia el color de fondo activo */
+    color: white; /* Cambia el color del texto */
+}
+
 .legal strong {
     color: #FF019B;
 }
@@ -121,7 +126,6 @@ p{
 .btn-info {
     background-color:#ffebf9;
     font-weight: 600;
-    border: #ffebf9 1px solid;
     line-height: 1.2;
 }
 
