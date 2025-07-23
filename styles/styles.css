@@ -259,7 +259,7 @@ p {
 .detail1 {
     width: 160px;
     position: absolute;
-    top: 600px;
+    top: 680px;
     left: 67%;
     z-index: 999;
 }
@@ -267,14 +267,14 @@ p {
 .detail2 {
     width: 160px;
     position: absolute;
-    top: 780px;
+    top: 860px;
     left: 67%;
 }
 
 .detail3 {
     width: 160px;
     position: absolute;
-    top: 870px;
+    top: 940px;
     left: 20%;
 }
 
