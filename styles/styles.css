@@ -257,25 +257,25 @@ p {
 }
 
 .detail1 {
-    width: 160px;
-    position: absolute;
-    top: 400px;
-    left: 67%;
-    z-index: 999;
+    width: 160px !important;
+    position: absolute !important;
+    top: 640px !important;
+    left: 67% !important;
+    z-index: 999 !important;
 }
 
 .detail2 {
-    width: 160px;
-    position: absolute;
-    top: 600px;
-    left: 67%;
+    width: 160px !important;
+    position: absolute !important;
+    top: 820px !important;
+    left: 67% !important;
 }
 
 .detail3 {
-    width: 160px;
-    position: absolute;
-    top: 600px;
-    left: 20%;
+    width: 160px !important;
+    position: absolute !important;
+    top: 900px !important;
+    left: 27% !important;
 }
 
 .home-section {
