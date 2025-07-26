@@ -1,0 +1,44 @@
+#general-section {
+  background-image: url(../../assets/img/home_background.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 10px;
+  padding-top: 30px;
+  background-position: center center;
+
+  .step-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    width: 320px;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 30px;
+
+    h3 {
+      font-size: 1.75rem;
+    }
+
+    h5 {
+      color: rgb(255, 255, 255);
+      font-weight: 300;
+      font-size: 1.25rem;
+    }
+
+    .step-image {
+      margin-top: -100px;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.text-pink {
+  color: #F411B4;
+}
+
+.highlight {
+  color: #F411B4;
+}
+
+.font-bold {
+  font-weight: 700;
+}

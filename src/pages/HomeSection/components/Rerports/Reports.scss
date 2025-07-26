@@ -1,0 +1,50 @@
+.reports {
+  h1 {
+    font-size: 42px;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+  }
+
+  h5 {
+    color: rgb(255, 1, 155);
+    font-weight: 700;
+    letter-spacing: 4px;
+    padding: 0;
+    margin: 0;
+  }
+
+  h6 {
+    font-size: 1rem;
+    color: rgb(211, 211, 211);
+    font-weight: 300;
+  }
+
+  .container-buttons {
+    div {
+      border-radius: 5px;
+      border: solid 1px #fff;
+      padding: 0.4rem 1rem;
+      margin: 0.2rem;
+      width: 14rem;
+
+      &:hover {
+        cursor: pointer;
+        background-color: rgb(232, 232, 232);
+        color: black;
+      }
+    }
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ddd;
+  }
+
+  .img-fluid {
+    width: 45rem;
+    height: auto;
+  }
+}

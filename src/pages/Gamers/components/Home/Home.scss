@@ -1,0 +1,68 @@
+.home-section {
+  padding-top: 1rem;
+  color: white;
+
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+
+    .gold {
+      background: linear-gradient(45deg, #FF019B, #8f1289);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+  }
+
+  h6 {
+    color: #D3D3D3;
+    font-weight: 300;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  .image-row {
+    margin-top: 3rem;
+
+    .container {
+      position: relative;
+      flex-wrap: wrap;
+    }
+
+    .portada {
+      width: 100%;
+      max-width: 70rem;
+      z-index: 1;
+    }
+
+    .detail1,
+    .detail2,
+    .detail3 {
+      position: absolute;
+      width: 10rem;
+      height: auto;
+    }
+
+    .detail1 {
+      top: 16%;
+      right: 21%;
+      z-index: 3;
+    }
+
+    .detail2 {
+      bottom: 29%;
+      right: 21%;
+      z-index: 2;
+    }
+
+    .detail3 {
+      top: 60%;
+      left: 21%;
+      z-index: 2;
+    }
+  }
+}

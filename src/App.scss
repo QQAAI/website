@@ -1,0 +1,44 @@
+@import 'primereact/resources/themes/saga-blue/theme.css';
+@import 'primereact/resources/primereact.min.css';
+@import 'primeflex/primeflex.css';
+@import 'primeicons/primeicons.css';
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #FF019B;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-horizontal {
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000000;
+  border-radius: 5px;
+}
+
+body {
+  background: #03051D;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  background-image: url(../src/assets/img/home_background.webp);
+  background-repeat: no-repeat;
+  background-position: 50% -400px;
+
+  .scroll-top {
+    background-color: #d40283 !important;
+    border-radius: 50% !important;
+    margin-bottom: 5rem;
+  }
+
+  header {
+    z-index: 10000;
+  }
+}

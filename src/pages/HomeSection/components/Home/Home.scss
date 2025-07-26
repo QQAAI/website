@@ -1,0 +1,122 @@
+.home-section {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 10px;
+  padding-top: 30px;
+
+  .title {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+    .ask {
+      background: linear-gradient(45deg, #FF019B, #8f1289);
+      -webkit-background-clip: text;
+      color: transparent;
+      font-size: 48px;
+    }
+  }
+
+  .subtitle {
+    font-size: 24px;
+    color: #dddddd;
+    margin-bottom: 30px;
+
+    .ask {
+      background: linear-gradient(45deg, #FF019B, #8f1289);
+      -webkit-background-clip: text;
+      color: transparent;
+      font-size: 48px;
+    }
+  }
+
+  .demo-video {
+    margin: 3rem 0;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(255, 1, 155, 0.5);
+  }
+
+  .benefits {
+    font-size: 20px;
+    color: #ffaa00;
+    margin-bottom: 30px;
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      margin-bottom: 10px;
+    }
+  }
+
+  .btn-sign-up {
+    width: 20rem;
+    font-size: 2rem;
+    background: linear-gradient(45deg, #FF019B, #8f1289);
+    border: none;
+    color: #fff;
+  }
+
+  .secondary-section {
+    margin-top: 60px;
+
+    .title-secondary {
+      font-size: 42px;
+      color: #ffffff;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .subtitle-secondary {
+      font-size: 22px;
+      color: #ffaa00;
+      margin-bottom: 25px;
+    }
+
+    .features-list {
+      font-size: 18px;
+      color: #dddddd;
+      list-style: none;
+      padding-left: 0;
+
+      li {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .image-stack {
+    position: relative;
+    margin-top: 3rem;
+
+    .portada {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .detail1 {
+      width: 160px;
+      position: absolute;
+      top: 20px;
+      left: 67%;
+    }
+
+    .detail2 {
+      width: 160px;
+      position: absolute;
+      top: 200px;
+      left: 67%
+    }
+
+    .detail3 {
+      width: 160px;
+      position: absolute;
+      top: 250px;
+      left: 25%;
+    }
+  }
+}

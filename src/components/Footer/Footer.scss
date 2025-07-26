@@ -1,0 +1,44 @@
+.footer {
+  background-color: #03051d;
+  border-top: 2px solid rgba(255, 255, 255, 0.141);
+  color: white;
+
+  .circle-background {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #282828;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: rgb(54, 54, 54);
+    }
+
+    img {
+      display: block;
+    }
+  }
+
+  .legal-dropdown {
+    position: relative;
+    background-color: #282828;
+    color: white;
+
+    .p-button {
+      font-size: 14px;
+    }
+
+    .legal-menu {
+      min-width: 320px;
+
+      a {
+        white-space: normal;
+        font-size: 14px;
+        line-height: 1.3;
+        padding: 0.75rem 1rem;
+      }
+    }
+  }
+}

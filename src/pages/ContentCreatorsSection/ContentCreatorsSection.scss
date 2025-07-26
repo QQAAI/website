@@ -1,0 +1,74 @@
+.content-creators-section {
+  padding: 2rem 1rem 0 1rem;
+
+  .gold {
+    background: linear-gradient(45deg, #FF019B, #8f1289);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 4rem 0;
+
+    .creator-card {
+      border-radius: 15px;
+      padding: 2rem;
+      background-color: rgba(255, 255, 255, 0.05);
+      margin-top: 3rem;
+      text-align: center;
+      width: 100%;
+      max-width: 350px;
+      position: relative;
+
+      .creator-img {
+        margin-top: -102px;
+        width: 17rem;
+        height: auto;
+      }
+
+      h3 {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .service-section {
+    background-color: #212121;
+    padding: 4rem 1rem;
+    color: #ffffff;
+
+    h6 {
+      color: rgb(255, 1, 155);
+      font-weight: 700;
+      letter-spacing: 4px;
+      padding: 0;
+      margin: 0;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+
+      li {
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        font-size: 0.95rem;
+      }
+    }
+  }
+}
