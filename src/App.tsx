@@ -10,6 +10,10 @@ import Footer from './components/Footer';
 import { ScrollTop } from 'primereact/scrolltop';
 import ContentCreatorsSection from './pages/ContentCreatorsSection';
 import Gamers from './pages/Gamers';
+import AboutUs from './pages/AboutUs';
+import ScrollToTop from './components/ScrollToTop';
+import PolicyHandling from './pages/PolicyHandling';
+import PolicyHandlingPersonalData from './pages/PolicyHandlingPersonalData';
 
 const App = () => {
   return (
@@ -19,10 +23,15 @@ const App = () => {
       </header>
 
       <main>
+        <ScrollToTop />
+
         <Routes>
           <Route path="/" element={<HomeSection />} />
           <Route path="/content-creator" element={<ContentCreatorsSection />} />
           <Route path="/gamers" element={<Gamers />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/policy-handling" element={<PolicyHandling />} />
+          <Route path="/policy-handling-personal-data" element={<PolicyHandlingPersonalData />} />
         </Routes>
 
         <ContactUs />

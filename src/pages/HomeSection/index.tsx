@@ -18,7 +18,7 @@ const HomeSection = () => {
           <div className="row text-center">
             <h5>VALUE TO YOUR BUSINESS</h5>
 
-            <ul>
+            <ul className="p-0">
               {['Real time analysis', 'Optimized Spend by 25%', 'Generate New Consumer Insights'].map((label: string) => (
                 <li>
                   <i className="pi pi-check" style={{ color: '#FF019B' }} />

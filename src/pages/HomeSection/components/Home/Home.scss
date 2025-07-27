@@ -54,9 +54,30 @@
   .btn-sign-up {
     width: 20rem;
     font-size: 2rem;
-    background: linear-gradient(45deg, #FF019B, #8f1289);
+    background: linear-gradient(270deg, #FF019B, #8f1289, #5900ff, #FF019B);
+    background-size: 300% 300%;
+    animation: gradientMove 5s ease infinite;
     border: none;
     color: #fff;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
   }
 
   .secondary-section {

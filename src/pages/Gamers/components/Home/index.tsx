@@ -8,7 +8,7 @@ import './Home.scss';
 const Home = () => {
   return (
     <section className="home-section flex flex-column">
-      <div className="container-xxl text-center px-4 py-6">
+      <div className="container-xxl text-center pb-4 py-6">
         <h1 className='p-0 m-0'>
           <span className="gold">Democratized AI</span> for Video Game Testing Player <br />
           Experience and Game Viewing Experience

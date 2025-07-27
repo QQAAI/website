@@ -1,21 +1,27 @@
+import { useNavigate } from 'react-router-dom';
+
 import { Dropdown } from 'primereact/dropdown';
+
 import instagram from '../../assets/img/instagram.svg'
+
 import './Footer.scss';
 
 const legalOptions = [
   {
     label: 'Policy for handling, use, and processing of biometric personal data',
-    value: 'policy-handling.html',
+    value: 'policy-handling',
   },
   {
     label: 'Policy on the protection, processing, and handling of personal data',
-    value: 'policy-handling-personal-data.html',
+    value: 'policy-handling-personal-data',
   },
 ];
 
 const Footer = () => {
-  const handleSelect = (e: { value: string }) => {
-    window.open(e.value, '_blank');
+  const navigate = useNavigate();
+
+  const handleSelect = ({ value }: { value: string }) => {
+    navigate(value);
   };
 
   return (

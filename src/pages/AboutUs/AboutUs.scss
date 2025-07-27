@@ -1,0 +1,63 @@
+.about-us-section {
+  padding: 3rem 0;
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .gold {
+    background: linear-gradient(45deg, #FF019B, #8f1289);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .social-icons {
+    gap: 1.5rem;
+    margin-top: 1rem;
+
+    .circle-background {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #282828;
+      padding: 10px;
+      border-radius: 50%;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: rgb(54, 54, 54);
+      }
+
+      img {
+        display: block;
+      }
+    }
+  }
+
+  .container-buttons {
+    border-radius: 5px;
+    border: solid 1px #fff;
+    padding: 0.4rem 1rem;
+    margin: 0.2rem;
+    width: 14rem;
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgb(232, 232, 232);
+      color: black;
+    }
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .img-fluid {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+}
