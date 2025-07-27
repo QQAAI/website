@@ -17,7 +17,8 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
-    margin: 4rem 0;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
 
     .creator-card {
       border-radius: 15px;
@@ -44,10 +45,21 @@
         font-size: 0.95rem;
         margin-bottom: 1.5rem;
       }
+    }
+  }
 
-      a {
-        text-decoration: none;
-      }
+  .btn-sign-up {
+    width: 20rem;
+    font-size: 2rem;
+    background: linear-gradient(270deg, #FF019B, #8f1289, #5900ff, #FF019B);
+    background-size: 300% 300%;
+    animation: gradientMove 5s ease infinite;
+    border: none;
+    color: #fff;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
     }
   }
 

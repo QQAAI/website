@@ -66,12 +66,18 @@ const ContentCreatorsSection = () => {
 
               <p>{item.description}</p>
             </div>
-
-            <a href={item.link}>
-              <Button label="Start Now" className="p-button-outlined p-button-secondary" />
-            </a>
           </div>
         ))}
+      </div>
+
+      <div className="flex justify-content-center mb-6">
+        <a
+          href="https://portal.qqa.ai"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button label="Start Now" className="btn-sign-up" />
+        </a>
       </div>
 
       <div className="service-section">
