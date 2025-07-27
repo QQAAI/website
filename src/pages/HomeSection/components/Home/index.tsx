@@ -56,6 +56,10 @@ const Home = () => {
         </h1>
 
         <h2 className="title m-0 p-0" style={{ fontSize: '40px' }}>
+          YouTube creators report <span className='ask'>50% viewer drop in the first 10 seconds.</span>
+        </h2>
+
+        <h2 className="title m-0 p-0" style={{ fontSize: '40px' }}>
           Attention Test Your Content Before You Post
         </h2>
 
