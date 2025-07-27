@@ -42,7 +42,7 @@ const TimelineSection: React.FC = () => {
 
               <div className="step-body">
                 <section>
-                  <div className="step-section">
+                  <div className="step-section-main">
                     <strong>Team</strong>
 
                     <p>{item.team}</p>
