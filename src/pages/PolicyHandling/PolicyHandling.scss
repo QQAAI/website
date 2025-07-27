@@ -1,0 +1,37 @@
+  .detail {
+    border: #717171 1px solid;
+    border-radius: 5px;
+    width: 300px;
+    padding: 5px 0px 5px 0px;
+    margin: auto;
+    background-color: #292929;
+  }
+
+  .legal {
+    color: white;
+    border-radius: 10px;
+    margin: 20px 30px;
+
+    strong {
+      color: #FF019B;
+    }
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+
+    strong {
+      color: #FF019B;
+    }
+  }
+
+  h3 {
+    color: #FF019B;
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }

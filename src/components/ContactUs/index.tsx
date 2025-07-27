@@ -4,7 +4,7 @@ const ContactUs = () => {
   return (
     <div className="contact-us-container">
       <div className="contact-header text-center">
-        <h1>Contact Us</h1>
+        <h1 className='p-0 m-0'>Contact Us</h1>
         <p>
           Ready to start exploring the power of AI in your industry? Complete the contact form now and take the
           first step towards innovative solutions and exceptional results.
