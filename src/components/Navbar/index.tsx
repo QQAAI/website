@@ -20,7 +20,7 @@ const Navbar = () => {
 
   const actionButtons = [
     { path: '/form', label: 'Start your trial', external: false },
-    { path: '"https://portal.qqa.ai"', label: 'Sign Up', external: true },
+    { path: 'https://portal.qqa.ai', label: 'Sign Up', external: true },
   ];
 
   const renderActionButtons = (mode: 'desktop' | 'mobile') =>
