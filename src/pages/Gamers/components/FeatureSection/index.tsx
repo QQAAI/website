@@ -26,7 +26,7 @@ const FeatureSection = () => {
   }, []);
 
   return (
-    <section id="feature" className="my-6">
+    <section id="feature-gamer" className="my-6">
       <div>
         <div className="text-center mb-4">
           <h5 className="font-bold m-0 p-0">CORE FEATURES</h5>

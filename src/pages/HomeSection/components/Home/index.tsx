@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
 
 import Steps from '../../../../components/Steps';
 
@@ -15,9 +14,9 @@ import videoAskAnswer from '../../../../assets/img/Final_Cut_HomePage_Video.mp4'
 import './Home.scss';
 
 const Home = () => {
-  const firstVideoRef = useRef<HTMLVideoElement>(null);
-  const secondVideoRef = useRef<HTMLVideoElement>(null);
   const secondVideoContainerRef = useRef<HTMLDivElement>(null);
+  const firstVideoRef           = useRef<HTMLVideoElement>(null);
+  const secondVideoRef          = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,15 +26,28 @@ const Home = () => {
       if (!video1 || !video2) return;
 
       const scrollY = window.scrollY;
+      const screenWidth = window.innerWidth;
 
-      if (scrollY >= 1400) {
+
+      let scrollThreshold1 = 1400;
+      let scrollThreshold2 = 900;
+
+      if (screenWidth <= 768) {
+        scrollThreshold1 = 1500;
+        scrollThreshold2 = 1100;
+      } else if (screenWidth <= 1024)  {
+        scrollThreshold1 = 1700;
+        scrollThreshold2 = 1100;
+      }
+
+      if (scrollY >= scrollThreshold1) {
         video1.pause();
         video2.pause();
-      } else if (scrollY >= 650) {
+      } else if (scrollY >= scrollThreshold2) {
         video1.pause();
-        video2.play().catch(() => { });
+        video2.play().catch(() => {});
       } else {
-        video1.play().catch(() => { });
+        video1.play().catch(() => {});
         video2.pause();
       }
     };
@@ -46,7 +58,6 @@ const Home = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
 
   return (
     <section className="home-section text-center">
@@ -68,14 +79,12 @@ const Home = () => {
         </p>
 
         <video
-          ref={firstVideoRef}
-          src={video}
-          className="demo-video"
-          autoPlay
           loop
-          muted
-          controls
-          controlsList="nodownload nofullscreen"
+          autoPlay
+          playsInline
+          src       = {video}
+          className = "demo-video"
+          ref       = {firstVideoRef}
         />
 
         <h1 className="title m-0 p-0 text-4xl">
@@ -84,13 +93,11 @@ const Home = () => {
 
         <div ref={secondVideoContainerRef}>
           <video
-            ref={secondVideoRef}
-            src={videoAskAnswer}
-            className="demo-video"
             loop
-            muted
-            controls
-            controlsList="nodownload nofullscreen"
+            playsInline
+            className = "demo-video"
+            ref       = {secondVideoRef}
+            src       = {videoAskAnswer}
           />
         </div>
 
@@ -98,13 +105,19 @@ const Home = () => {
           <Steps img1={img1} img2={img2} img3={img3} />
         </div>
 
-        <Link to="https://portal.qqa.ai">
+        <a
+          href="https://portal.qqa.ai"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Button label="Sign Up" className="btn-sign-up" />
-        </Link>
+        </a>
 
         <div className="secondary-section mt-6">
           <h2 className="title-secondary">Maximize Attention Time Before You Post</h2>
+
           <p className="subtitle-secondary">🎥 Stop Guessing. Start Testing.</p>
+
           <ul className="features-list">
             <li>👀 What your audience looks at — second by second</li>
             <li>😊 How they emotionally react — second by second</li>
