@@ -61,3 +61,47 @@
     max-width: 100%;
   }
 }
+
+@media (max-width: 1024px) {
+  .about-us-section .flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-us-section img,
+  .about-us-section > div > div,
+  .about-us-section > div > img {
+    max-width: 90% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-us-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-us-section p {
+    font-size: 1rem;
+  }
+
+  .about-us-section .container-buttons {
+    width: 10rem;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-us-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .about-us-section p {
+    font-size: 0.95rem;
+  }
+
+  .about-us-section .container-buttons {
+    width: 100%;
+    text-align: center;
+  }
+}

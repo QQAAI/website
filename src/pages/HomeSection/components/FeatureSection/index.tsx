@@ -34,13 +34,11 @@ const FeatureSection = () => {
         </div>
 
         <div className="hidden md:flex justify-content-center">
-          <div className="relative w-full max-w-6xl flex justify-content-center">
+          <div className="relative w-full flex justify-content-center">
             {desktopFrames.map((img, i) => (
               <img
                 key={i}
                 src={img}
-                width={1300}
-                height={600}
                 alt={`Frame ${i + 1}`}
                 className={classNames(
                   'absolute transition-opacity duration-1000 border-round-xl',
@@ -59,8 +57,6 @@ const FeatureSection = () => {
               <img
                 key={i}
                 src={img}
-                width={1300}
-                height={600}
                 alt={`Mobile Frame ${i + 1}`}
                 className={classNames(
                   'absolute transition-opacity duration-1000 border-round-xl',

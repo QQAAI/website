@@ -19,42 +19,26 @@ const Navbar = () => {
   ];
 
   const actionButtons = [
-    { path: '/form', label: 'Start your trial', external: false },
-    { path: 'https://portal.qqa.ai', label: 'Sign Up', external: true },
+    { path: 'https://portal.qqa.ai', label: 'Start your trial' },
+    { path: 'https://portal.qqa.ai/#/sign-up', label: 'Sign Up' },
   ];
 
   const renderActionButtons = (mode: 'desktop' | 'mobile') =>
     actionButtons.map((btn) =>
-      btn.external ? (
-        <a
-          key={btn.path}
-          href={btn.path}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={mode === 'mobile' ? 'w-full' : ''}
-        >
-          <Button
-            label={btn.label}
-            className={classNames('p-button-sm', 'custom-btn', {
-              'w-full': mode === 'mobile',
-            })}
-          />
-        </a>
-      ) : (
-        <Link
-          key={btn.path}
-          to={btn.path}
-          onClick={mode === 'mobile' ? () => setVisible(false) : undefined}
-          className={mode === 'mobile' ? 'w-full' : ''}
-        >
-          <Button
-            label={btn.label}
-            className={classNames('p-button-sm', 'custom-btn', {
-              'w-full': mode === 'mobile',
-            })}
-          />
-        </Link>
-      )
+      <a
+        key={btn.path}
+        href={btn.path}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={mode === 'mobile' ? 'w-full' : ''}
+      >
+        <Button
+          label={btn.label}
+          className={classNames('p-button-sm', 'custom-btn', {
+            'w-full': mode === 'mobile',
+          })}
+        />
+      </a>
     );
 
   return (

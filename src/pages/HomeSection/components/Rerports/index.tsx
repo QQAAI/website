@@ -37,18 +37,9 @@ export const Reports = () => {
       </div>
 
       <div className="container-img flex justify-content-center">
-        <div className='flex gap-5'>
-          <img
-            className="img-fluid"
-            src={img1}
-            alt="Report Visual 2"
-          />
-
-          <img
-            className="img-fluid"
-            src={img2}
-            alt="Report Visual 1"
-          />
+        <div className="flex flex-wrap justify-content-center gap-5">
+          <img className="img-fluid" src={img1} alt="Report Visual 1" />
+          <img className="img-fluid" src={img2} alt="Report Visual 2" />
         </div>
       </div>
     </div>
