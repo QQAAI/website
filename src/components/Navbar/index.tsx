@@ -19,7 +19,7 @@ const Navbar = () => {
   ];
 
   const actionButtons = [
-    { path: 'https://portal.qqa.ai', label: 'Start your trial' },
+    { path: 'https://portal.qqa.ai', label: 'Log In' },
     { path: 'https://portal.qqa.ai/#/sign-up', label: 'Sign Up' },
   ];
 
