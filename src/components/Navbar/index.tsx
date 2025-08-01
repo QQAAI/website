@@ -54,7 +54,7 @@ const Navbar = () => {
               <li key={link.path}>
                 <Link
                   to={link.path}
-                  className={classNames('nav-link', {
+                  className={classNames('nav-link text-base', {
                     active: location.pathname === link.path,
                   })}
                 >
@@ -87,7 +87,7 @@ const Navbar = () => {
             <li key={link.path} className="mb-3">
               <Link
                 to={link.path}
-                className="nav-link block"
+                className="nav-link text-base block"
                 onClick={() => setVisible(false)}
               >
                 {link.label}

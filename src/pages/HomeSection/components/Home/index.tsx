@@ -80,11 +80,13 @@ const Home = () => {
 
         <video
           loop
+          controls
           autoPlay
           playsInline
-          src       = {video}
-          className = "demo-video"
-          ref       = {firstVideoRef}
+          src          = {video}
+          className    = "demo-video"
+          ref          = {firstVideoRef}
+          controlsList = "nodownload nofullscreen"
         />
 
         <h1 className="title m-0 p-0 text-4xl">
@@ -94,10 +96,12 @@ const Home = () => {
         <div ref={secondVideoContainerRef}>
           <video
             loop
+            controls
             playsInline
-            className = "demo-video"
-            ref       = {secondVideoRef}
-            src       = {videoAskAnswer}
+            className    = "demo-video"
+            ref          = {secondVideoRef}
+            src          = {videoAskAnswer}
+            controlsList = "nodownload nofullscreen"
           />
         </div>
 
