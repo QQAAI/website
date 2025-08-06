@@ -21,16 +21,24 @@
   border-radius: 5px;
 }
 
-body {
+html, body {
   background: #03051D;
+  height: 100%;
   margin: 0;
   padding: 0;
 }
 
 #app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   background-image: url(../src/assets/img/home_background.webp);
   background-repeat: no-repeat;
   background-position: 50% -400px;
+
+  .content {
+    flex: 1;
+  }
 
   .scroll-top {
     background-color: #d40283 !important;

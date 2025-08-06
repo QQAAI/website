@@ -25,7 +25,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="footer">
+    <section className="footer">
       <div className="container flex flex-column md:flex-row justify-content-between align-items-center py-3 gap-4">
         {/* Copyright */}
         <p className="m-0 px-4 text-sm text-center md:text-left" style={{ color: 'rgb(135, 135, 135)' }}>
@@ -56,7 +56,7 @@ const Footer = () => {
           />
         </div>
       </div>
-    </footer>
+    </section>
   );
 };
 
