@@ -22,7 +22,7 @@ const App = () => {
         <Navbar />
       </header>
 
-      <main>
+      <main className="content">
         <ScrollToTop />
 
         <Routes>
