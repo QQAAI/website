@@ -29,14 +29,14 @@ const Footer = () => {
       <div className="container flex flex-column md:flex-row justify-content-between align-items-center py-3 gap-4">
         {/* Copyright */}
         <p className="m-0 px-4 text-sm text-center md:text-left" style={{ color: 'rgb(135, 135, 135)' }}>
-          @Copyrigth 2025 Neurosoft AI Corporation
+          @Copyright 2025 Neurosoft AI Corporation
         </p>
 
         <div className="flex gap-5">
           {/* Redes sociales */}
           <div className="flex align-items-center justify-content-center gap-3">
             <a
-              href="https://www.instagram.com/neurosoft.23?igsh=MzBvaDIya2szN2Q0&utm_source=qr"
+              href="https://www.instagram.com/qqa.ai.creators/"
               target="_blank"
               rel="noopener noreferrer"
               className="circle-background"
