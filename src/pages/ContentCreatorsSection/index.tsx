@@ -1,4 +1,4 @@
-import { Button } from 'primereact/button';
+// import { Button } from 'primereact/button';
 import beginners from '../../assets/img/c-beginners.png';
 import experienced from '../../assets/img/c-experienced.png';
 import expert from '../../assets/img/c-expert.png';
@@ -71,13 +71,13 @@ const ContentCreatorsSection = () => {
       </div>
 
       <div className="flex justify-content-center mb-6">
-        <a
+        {/* <a
           href="https://portal.qqa.ai"
           target="_blank"
           rel="noopener noreferrer"
         >
           <Button label="Start Now" className="btn-sign-up" />
-        </a>
+        </a> */}
       </div>
 
       <div className="service-section">

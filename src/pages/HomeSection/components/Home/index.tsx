@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 
 import Steps from '../../../../components/Steps';
 
-import { Button } from 'primereact/button';
+// import { Button } from 'primereact/button';
 
 import img1 from '../../../../assets/img/Step 1_woman.png';
 import img2 from '../../../../assets/img/Step 2_woman.png';
@@ -109,13 +109,13 @@ const Home = () => {
           <Steps img1={img1} img2={img2} img3={img3} />
         </div>
 
-        <a
+        {/* <a
           href="https://portal.qqa.ai"
           target="_blank"
           rel="noopener noreferrer"
         >
           <Button label="Sign Up" className="btn-sign-up" />
-        </a>
+        </a> */}
 
         <div className="secondary-section mt-6">
           <h2 className="title-secondary">Maximize Attention Time Before You Post</h2>
