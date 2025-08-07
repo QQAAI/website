@@ -5,6 +5,7 @@ import { Sidebar } from 'primereact/sidebar';
 import { classNames } from 'primereact/utils';
 import Logo from '../../assets/img/qqa_logo_nav.webp';
 import './Navbar.scss';
+import type { ActionButton } from './interface';
 
 const Navbar = () => {
   const location = useLocation();
@@ -18,7 +19,7 @@ const Navbar = () => {
     { path: '/contact', label: 'Contact' },
   ];
 
-  const actionButtons = [
+  const actionButtons: ActionButton[] = [
     // { path: 'https://portal.qqa.ai', label: 'Log In' },
     // { path: 'https://portal.qqa.ai/#/sign-up', label: 'Sign Up' },
   ];

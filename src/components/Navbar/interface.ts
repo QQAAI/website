@@ -4,3 +4,8 @@ export interface NavItem {
   isCurrent?: boolean;
   external?: boolean;
 }
+
+export type ActionButton = {
+  path: string;
+  label: string;
+};
