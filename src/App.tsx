@@ -1,19 +1,22 @@
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 
+
+import Gamers from './pages/Gamers';
+import AboutUs from './pages/AboutUs';
 import HomeSection from './pages/HomeSection';
+import PolicyHandling from './pages/PolicyHandling';
+import ContentCreatorsSection from './pages/ContentCreatorsSection';
+import PolicyHandlingPersonalData from './pages/PolicyHandlingPersonalData';
+
+import { ScrollTop } from 'primereact/scrolltop';
+
+import Footer from './components/Footer';
+import ContactUs from './components/ContactUs';
+import ScrollToTop from './components/ScrollToTop';
 
 import 'primeflex/primeflex.css';
 import './App.scss';
-import ContactUs from './components/ContactUs';
-import Footer from './components/Footer';
-import { ScrollTop } from 'primereact/scrolltop';
-import ContentCreatorsSection from './pages/ContentCreatorsSection';
-import Gamers from './pages/Gamers';
-import AboutUs from './pages/AboutUs';
-import ScrollToTop from './components/ScrollToTop';
-import PolicyHandling from './pages/PolicyHandling';
-import PolicyHandlingPersonalData from './pages/PolicyHandlingPersonalData';
 
 const App = () => {
   return (
