@@ -29,7 +29,7 @@ const Footer = () => {
       <div className="container flex flex-column md:flex-row justify-content-between align-items-center py-3 gap-4">
         {/* Copyright */}
         <p className="m-0 px-4 text-sm text-center md:text-left" style={{ color: 'rgb(135, 135, 135)' }}>
-          @Copyright 2025 Neurosoft AI Corporation
+          @Copyright 2025 QQA AI Studio
         </p>
 
         <div className="flex gap-5">
