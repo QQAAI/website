@@ -20,8 +20,8 @@ const Navbar = () => {
   ];
 
   const actionButtons: ActionButton[] = [
-    // { path: 'https://portal.qqa.ai', label: 'Log In' },
-    // { path: 'https://portal.qqa.ai/#/sign-up', label: 'Sign Up' },
+    { path: 'https://portal.qqa.ai', label: 'Log In' },
+    { path: 'https://portal.qqa.ai/#/sign-up', label: 'Sign Up' },
   ];
 
   const renderActionButtons = (mode: 'desktop' | 'mobile') =>

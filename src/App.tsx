@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 
-
+// Pages
 import Gamers from './pages/Gamers';
 import AboutUs from './pages/AboutUs';
 import HomeSection from './pages/HomeSection';
@@ -9,14 +9,18 @@ import PolicyHandling from './pages/PolicyHandling';
 import ContentCreatorsSection from './pages/ContentCreatorsSection';
 import PolicyHandlingPersonalData from './pages/PolicyHandlingPersonalData';
 
+// Components PrimeReact
 import { ScrollTop } from 'primereact/scrolltop';
 
+// Components
 import Footer from './components/Footer';
 import ContactUs from './components/ContactUs';
 import ScrollToTop from './components/ScrollToTop';
+// import SupportButton from './components/SupportButton';
 
-import 'primeflex/primeflex.css';
+// Styles
 import './App.scss';
+import 'primeflex/primeflex.css';
 
 const App = () => {
   return (
@@ -41,6 +45,8 @@ const App = () => {
       </main>
 
       <ScrollTop threshold={100} className="w-3rem h-3rem border-round bg-primary scroll-top" icon="pi pi-arrow-up text-base" />
+
+      {/* <SupportButton /> */}
 
       <footer>
         <Footer />

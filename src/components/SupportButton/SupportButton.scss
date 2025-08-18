@@ -1,0 +1,128 @@
+.support-wrapper {
+  position: fixed;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1000;
+  bottom: 140px;
+}
+
+.support-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(270deg, #FF019B, #8f1289, #5900ff, #FF019B);
+  background-size: 300% 300%;
+  animation: gradientMove 5s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+  }
+
+  &:hover {
+    transform: scale(1.06);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.22);
+  }
+}
+
+.support-overlay {
+  position: fixed;
+  bottom: 170px;
+  right: 25px;
+  width: 320px;
+  max-width: calc(100vw - 40px);
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.28);
+  background: linear-gradient(135deg, #2d0b4e 0%, #141e30 100%);
+  color: #fff;
+  z-index: 2147483647;
+  overflow: hidden;
+  animation: fadeIn 0.2s ease-out;
+
+  &.position-bottom {
+    bottom: 100px;
+    top: auto;
+  }
+
+  &.position-top-right {
+    top: 170px;
+    bottom: auto;
+  }
+}
+
+.support-overlay-content {
+  padding: 16px;
+  text-align: center;
+
+  .support-text {
+    margin: 0 0 8px;
+    font-size: 0.95rem;
+    color: #f5f5f5;
+  }
+
+  .support-email {
+    margin: 0 0 12px;
+    font-weight: 700;
+    color: #ffb3ff;
+    word-break: break-all;
+  }
+}
+
+/* Whatsapp button */
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #25d366;
+  color: #fff;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  width: 100%;
+  transition: transform 0.12s ease, background 0.12s ease;
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-2px);
+  background: #1ebe5b;
+}
+
+.wa-icon {
+  font-size: 1.1rem;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 520px) {
+  .support-btn {
+    bottom: 100px;
+    right: 16px;
+  }
+
+  .support-overlay {
+    bottom: 90px;
+    right: 10px;
+    width: 92vw;
+  }
+}

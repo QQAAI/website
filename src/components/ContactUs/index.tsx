@@ -26,7 +26,7 @@ const ContactUs = () => {
         <script>
           {`window.jotformEmbedHandler("iframe[id='JotFormIFrame-241815056613655']", "https://form.jotform.com/")`}
         </script> */}
-        <h1 className='p-0 m-0'>Support@roboticaxai.com</h1>
+        <h1 className='p-0 m-0'>support@roboticaxai.com</h1>
       </div>
     </div>
   );

@@ -2,13 +2,10 @@ import { useEffect, useRef } from 'react';
 
 import Steps from '../../../../components/Steps';
 
-// import { Button } from 'primereact/button';
-
 import img1 from '../../../../assets/img/Step 1_woman.png';
 import img2 from '../../../../assets/img/Step 2_woman.png';
 import img3 from '../../../../assets/img/Step 3 Image.png';
 
-import video from '../../../../assets/img/Website_HomePage.mp4';
 import videoAskAnswer from '../../../../assets/img/Final_Cut_HomePage_Video.mp4';
 
 import './Home.scss';
@@ -27,7 +24,6 @@ const Home = () => {
 
       const scrollY = window.scrollY;
       const screenWidth = window.innerWidth;
-
 
       let scrollThreshold1 = 1400;
       let scrollThreshold2 = 900;
@@ -59,6 +55,24 @@ const Home = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const video = firstVideoRef.current;
+    if (video) {
+      // Arranca silenciado y sin controles
+      video.muted = true;
+      video.controls = false;
+      video.play().catch(() => {});
+
+      // Después de 1 segundo, activa audio y controles
+      const timer = setTimeout(() => {
+        video.muted = false;
+        video.controls = true;
+      }, 1000);
+
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
   return (
     <section className="home-section text-center">
       <div className="container-xxl">
@@ -78,15 +92,15 @@ const Home = () => {
           Don't lose followers & views <br /> by guessing their likes.
         </p>
 
+        {/* Primer video con la lógica aplicada */}
         <video
           loop
-          controls
           autoPlay
           playsInline
-          src          = {video}
           className    = "demo-video"
           ref          = {firstVideoRef}
           controlsList = "nodownload nofullscreen"
+          src          = 'https://rawdatastaging.blob.core.windows.net/video/Beta-Web%20Home%20Page%20Video-V2-8-17-2025.mp4'
         />
 
         <h1 className="title m-0 p-0 text-4xl">
@@ -108,14 +122,6 @@ const Home = () => {
         <div>
           <Steps img1={img1} img2={img2} img3={img3} />
         </div>
-
-        {/* <a
-          href="https://portal.qqa.ai"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Button label="Sign Up" className="btn-sign-up" />
-        </a> */}
 
         <div className="secondary-section mt-6">
           <h2 className="title-secondary">Maximize Attention Time Before You Post</h2>
