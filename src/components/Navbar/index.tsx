@@ -5,7 +5,7 @@ import { Sidebar } from 'primereact/sidebar';
 import { classNames } from 'primereact/utils';
 import Logo from '../../assets/img/qqa_logo_nav.webp';
 import './Navbar.scss';
-import type { ActionButton } from './interface';
+// import type { ActionButton } from './interface';
 
 const Navbar = () => {
   const location = useLocation();
@@ -19,28 +19,28 @@ const Navbar = () => {
     { path: '/contact', label: 'Contact' },
   ];
 
-  const actionButtons: ActionButton[] = [
-    { path: 'https://portal.qqa.ai', label: 'Log In' },
-    { path: 'https://portal.qqa.ai/#/sign-up', label: 'Sign Up' },
-  ];
+  // const actionButtons: ActionButton[] = [
+  //   { path: 'https://portal.qqa.ai', label: 'Log In' },
+  //   { path: 'https://portal.qqa.ai/#/sign-up', label: 'Sign Up' },
+  // ];
 
-  const renderActionButtons = (mode: 'desktop' | 'mobile') =>
-    actionButtons.map((btn) =>
-      <a
-        key={btn.path}
-        href={btn.path}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={mode === 'mobile' ? 'w-full' : ''}
-      >
-        <Button
-          label={btn.label}
-          className={classNames('p-button-sm', 'custom-btn', {
-            'w-full': mode === 'mobile',
-          })}
-        />
-      </a>
-    );
+  // const renderActionButtons = (mode: 'desktop' | 'mobile') =>
+  //   actionButtons.map((btn) =>
+  //     <a
+  //       key={btn.path}
+  //       href={btn.path}
+  //       target="_blank"
+  //       rel="noopener noreferrer"
+  //       className={mode === 'mobile' ? 'w-full' : ''}
+  //     >
+  //       <Button
+  //         label={btn.label}
+  //         className={classNames('p-button-sm', 'custom-btn', {
+  //           'w-full': mode === 'mobile',
+  //         })}
+  //       />
+  //     </a>
+  //   );
 
   return (
     <>
@@ -66,7 +66,7 @@ const Navbar = () => {
           </ul>
 
           <div className="hidden md:flex align-items-center gap-2 z-1 navbar-actions">
-            {renderActionButtons('desktop')}
+            {/* {renderActionButtons('desktop')} */}
           </div>
 
           <Button
@@ -97,7 +97,7 @@ const Navbar = () => {
           ))}
 
           <div className="mt-4 flex flex-column gap-2">
-            {renderActionButtons('mobile')}
+            {/* {renderActionButtons('mobile')} */}
           </div>
         </ul>
       </Sidebar>
