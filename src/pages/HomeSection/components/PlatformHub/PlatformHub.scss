@@ -1,0 +1,221 @@
+.platform-hub {
+  background: #03051d;
+  padding: 56px 32px 72px;
+
+  .hub-shell {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  // ── Welcome header ───────────────────────────────────────
+  .hub-welcome {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 32px;
+    margin-bottom: 40px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .hub-welcome__title {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    margin: 0 0 6px;
+  }
+
+  .hub-welcome__sub {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.45);
+    margin: 0;
+  }
+
+  .hub-plan-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    background: rgba(255, 1, 155, 0.1);
+    color: #FF019B;
+    border: 1px solid rgba(255, 1, 155, 0.3);
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+    flex-shrink: 0;
+
+    .pill-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #FF019B;
+    }
+  }
+
+  // ── Tiles grid ───────────────────────────────────────────
+  .hub-tiles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  // ── Single tile ──────────────────────────────────────────
+  .hub-tile {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 14px;
+    padding: 22px;
+    min-height: 180px;
+    cursor: pointer;
+    overflow: hidden;
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255, 255, 255, 0.18);
+    }
+
+    // Glow orb
+    &::before {
+      content: "";
+      position: absolute;
+      top: -40px; right: -40px;
+      width: 140px; height: 140px;
+      border-radius: 50%;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+      pointer-events: none;
+    }
+    &:hover::before { opacity: 1; }
+
+    // Color variants — icon backgrounds + glow
+    &--blue {
+      .hub-tile__icon { background: rgba(37, 99, 235, 0.15); color: #60a5fa; }
+      &:hover { box-shadow: 0 8px 32px rgba(37, 99, 235, 0.15); }
+      &::before { background: radial-gradient(circle, rgba(37,99,235,0.2) 0%, transparent 70%); }
+    }
+    &--emerald {
+      .hub-tile__icon { background: rgba(5, 150, 105, 0.15); color: #34d399; }
+      &:hover { box-shadow: 0 8px 32px rgba(5, 150, 105, 0.15); }
+      &::before { background: radial-gradient(circle, rgba(5,150,105,0.2) 0%, transparent 70%); }
+    }
+    &--violet {
+      .hub-tile__icon { background: rgba(124, 58, 237, 0.15); color: #a78bfa; }
+      &:hover { box-shadow: 0 8px 32px rgba(124, 58, 237, 0.15); }
+      &::before { background: radial-gradient(circle, rgba(124,58,237,0.2) 0%, transparent 70%); }
+    }
+  }
+
+  // ── Icon ─────────────────────────────────────────────────
+  .hub-tile__icon {
+    flex-shrink: 0;
+    width: 48px; height: 48px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+
+    svg { width: 22px; height: 22px; }
+  }
+
+  // ── Body ─────────────────────────────────────────────────
+  .hub-tile__body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  .hub-tile__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+
+  .hub-tile__title {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  .hub-tile__arrow {
+    flex-shrink: 0;
+    width: 28px; height: 28px;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    color: rgba(255, 255, 255, 0.3);
+    transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
+
+    svg { width: 14px; height: 14px; }
+  }
+
+  .hub-tile:hover .hub-tile__arrow {
+    background: #FF019B;
+    color: white;
+    transform: translateX(2px);
+  }
+
+  .hub-tile__desc {
+    font-size: 13.5px;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0 0 14px;
+    line-height: 1.5;
+  }
+
+  // ── Footer ───────────────────────────────────────────────
+  .hub-tile__foot {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.3);
+    font-weight: 500;
+  }
+
+  .hub-tile__meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .hub-tile__dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: #059669;
+    flex-shrink: 0;
+  }
+
+  .hub-tile__stat {
+    white-space: nowrap;
+
+    strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+  }
+}

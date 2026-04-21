@@ -1,152 +1,182 @@
-/* TimelineSection.scss */
 #surface-ground {
+  background: #1b062c;
+
   .timeline-header {
-    background-color: #1b062c;
-    padding: 30px 1rem 1rem;
+    padding: 72px 32px 32px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+
+    .timeline-eyebrow {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: #FF019B;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
 
     h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
+      font-size: clamp(24px, 3.5vw, 38px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      margin: 0 0 12px;
+      line-height: 1.2;
+
+      .highlight { color: #FF019B; }
     }
 
     h6 {
-      font-size: 1rem;
-      color: rgb(211, 211, 211);
-      font-weight: 300;
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.45);
+      font-weight: 400;
+      margin: 0;
+      line-height: 1.6;
     }
   }
 
   .timeline-buttons {
-    background-color: #1b062c;
+    padding: 24px 32px 8px;
     text-align: center;
-    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
 
     .custom-button-with {
-      background-color: #e60073;
-      display: inline-block;
-      padding: 0.5rem 1rem;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 24px;
+      background: #FF019B;
+      color: #ffffff;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 700;
       cursor: pointer;
       user-select: none;
-      line-height: 1.2;
-      margin-right: 1rem;
+      line-height: 1.3;
+      border: 1px solid transparent;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+
+      .text-xs { font-size: 12px; font-weight: 400; opacity: 0.85; }
 
       &:hover {
-        background-color: #ce71d0bf;
-        border: #e200e6 1px solid;
+        opacity: 0.9;
+        transform: translateY(-1px);
       }
     }
 
     .custom-button-without {
-      background-color: #ffebf9;
-      color: black;
-      display: inline-block;
-      padding: 0.5rem 1rem;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 24px;
+      background: rgba(255, 255, 255, 0.08);
+      color: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
       cursor: pointer;
       user-select: none;
-      line-height: 1.2;
+      line-height: 1.3;
+      transition: border-color 0.2s ease, background 0.2s ease;
+
+      .text-xs { font-size: 12px; font-weight: 400; opacity: 0.7; }
 
       &:hover {
-        background-color: #b70083;
-        border: #b70083 1px solid;
+        border-color: rgba(255, 255, 255, 0.25);
+        background: rgba(255, 255, 255, 0.12);
       }
     }
   }
 
   .timeline-section {
-    background-color: #1b062c;
+    padding-bottom: 48px;
+    display: flex;
     justify-content: center;
-    display: flex
-;
   }
+
   .timeline-container {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: flex-start;
-    gap: 1rem;
-    padding: 2rem;
-    width: 89.3%;
+    gap: 16px;
+    padding: 24px 32px;
+    width: 100%;
+    max-width: 1200px;
     overflow-x: auto;
     scroll-behavior: smooth;
 
+    // Custom scrollbar
+    &::-webkit-scrollbar { height: 4px; }
+    &::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); border-radius: 4px; }
+    &::-webkit-scrollbar-thumb { background: rgba(255, 1, 155, 0.4); border-radius: 4px; }
+
     .timeline-step {
-      background: #1e1e2f;
+      background: rgba(255, 255, 255, 0.04);
       color: #fff;
-      border-radius: 1rem;
-      padding: 1.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 24px 20px;
       width: 18rem;
       flex: 0 0 auto;
       display: flex;
       flex-direction: column;
-      box-shadow: 0 0 10px #b70083aa;
-      transition: transform 0.3s ease;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 
       &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 0 20px #ff00aa;
+        transform: translateY(-4px);
+        border-color: rgba(255, 1, 155, 0.3);
+        box-shadow: 0 12px 40px rgba(255, 1, 155, 0.1);
       }
 
       .step-header {
-        height: 6rem;
-        font-size: 1.2rem;
-        font-weight: bold;
-        border-bottom: 2px solid #b70083;
-        padding-bottom: 0.5rem;
-        margin-bottom: 1rem;
+        height: 5rem;
+        font-size: 1.1rem;
+        font-weight: 700;
+        border-bottom: 1px solid rgba(255, 1, 155, 0.3);
+        padding-bottom: 12px;
+        margin-bottom: 16px;
+        color: #ffffff;
+        display: flex;
+        align-items: flex-end;
       }
 
       .step-body {
         section {
-          height: auto;
-          border-bottom: 2px solid #b70083;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+          padding-bottom: 12px;
+          margin-bottom: 12px;
 
           .step-section-main {
-            margin-bottom: 1rem;
-            height: 10rem;
+            margin-bottom: 12px;
+            min-height: 9rem;
 
-            strong {
-              color: #ff009b;
-              font-size: 18px;
-            }
-
-            p {
-              margin: 0.3rem 0;
-            }
+            strong { color: #FF019B; font-size: 14px; font-weight: 700; display: block; margin-bottom: 6px; }
+            p { margin: 4px 0; font-size: 13px; color: rgba(255,255,255,0.65); }
           }
 
           .step-section {
-            margin-bottom: 1rem;
-
-            strong {
-              color: #ff009b;
-              font-size: 18px;
-            }
-
-            p {
-              margin: 0.3rem 0;
-            }
+            strong { color: #FF019B; font-size: 14px; font-weight: 700; display: block; margin-bottom: 6px; }
+            p { margin: 4px 0; font-size: 13px; color: rgba(255,255,255,0.65); }
           }
         }
 
         .step-highlight {
-          height: 16rem;
-          background: #b70083;
-          padding: 1rem;
-          border-radius: 0.8rem;
-          margin-top: 1rem;
-          color: white;
+          background: linear-gradient(135deg, rgba(255, 1, 155, 0.15), rgba(143, 18, 137, 0.15));
+          border: 1px solid rgba(255, 1, 155, 0.2);
+          padding: 14px;
+          border-radius: 10px;
+          margin-top: 12px;
+          min-height: 10rem;
+          display: flex;
+          flex-direction: column;
 
-          .highlight-title {
-            font-weight: bold;
-            margin-bottom: 0.3rem;
-          }
-
-          .highlight-desc {
-            font-size: 0.85rem;
-            opacity: 0.9;
-          }
+          h4 { font-size: 13px; font-weight: 700; color: #FF019B; margin: 0 0 6px; }
+          p  { font-size: 12px; color: rgba(255,255,255,0.65); margin: 0; line-height: 1.55; }
         }
       }
     }

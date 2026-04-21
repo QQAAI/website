@@ -1,20 +1,90 @@
 .contact-us-container {
-  padding: 3rem 1rem;
+  padding: 80px 32px;
   color: white;
+  background: linear-gradient(180deg, transparent 0%, rgba(255, 1, 155, 0.04) 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 
-  .contact-header {
-    max-width: 800px;
-    margin: 0 auto 2rem;
+  .contact-inner {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+  }
 
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+  .contact-eyebrow {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #FF019B;
+    margin-bottom: 16px;
+  }
+
+  .contact-heading {
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    margin: 0 0 16px;
+    line-height: 1.2;
+  }
+
+  .contact-sub {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.7;
+    margin: 0 0 48px;
+  }
+
+  .contact-card {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 24px 32px;
+    text-decoration: none;
+    transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      border-color: rgba(255, 1, 155, 0.35);
+      background: rgba(255, 1, 155, 0.06);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(255, 1, 155, 0.12);
+    }
+  }
+
+  .contact-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(255, 1, 155, 0.12);
+    display: grid;
+    place-items: center;
+    color: #FF019B;
+    flex-shrink: 0;
+
+    svg { width: 20px; height: 20px; }
+  }
+
+  .contact-email-text {
+    text-align: left;
+
+    span {
+      display: block;
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.35);
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
     }
 
-    p {
-      font-size: 1rem;
-      opacity: 0.85;
-      line-height: 1.6;
+    strong {
+      font-size: 18px;
+      color: #ffffff;
+      font-weight: 600;
     }
   }
 

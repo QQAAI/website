@@ -1,40 +1,103 @@
-.home-section {
-  padding-top: 1rem;
+.gamer-home-section {
+  padding: 72px 32px 0;
   color: white;
 
-  h1 {
-    font-size: 2.5rem;
-    line-height: 1.4;
-    margin-bottom: 2rem;
+  .gamer-hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+  }
 
-    .gold {
-      background: linear-gradient(45deg, #FF019B, #8f1289);
-      -webkit-background-clip: text;
-      color: transparent;
+  .gamer-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    background: rgba(139, 92, 246, 0.12);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #a78bfa;
+    margin-bottom: 28px;
+
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #a78bfa;
     }
   }
 
-  h6 {
-    color: #D3D3D3;
-    font-weight: 300;
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+  .gamer-title {
+    font-size: clamp(32px, 5vw, 56px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: #ffffff;
+    line-height: 1.1;
+    margin: 0 0 24px;
+
+    .gold {
+      background: linear-gradient(90deg, #FF019B, #8f1289);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
   }
 
-  h3 {
-    font-size: 1.75rem;
+  .gamer-subtitle {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.65;
+    margin: 0 0 8px;
+    font-weight: 400;
+  }
+
+  .gamer-pricing {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .price-chip {
+      padding: 8px 18px;
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: 700;
+
+      &--orange {
+        background: rgba(255, 138, 55, 0.12);
+        border: 1px solid rgba(255, 138, 55, 0.3);
+        color: rgb(255, 138, 55);
+      }
+
+      &--violet {
+        background: rgba(139, 92, 246, 0.12);
+        border: 1px solid rgba(139, 92, 246, 0.3);
+        color: #a78bfa;
+      }
+    }
   }
 
   .image-row {
+    margin-top: 48px;
+
     .container {
+      max-width: 1100px;
+      margin: 0 auto;
       position: relative;
-      flex-wrap: wrap;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .portada {
       width: 100%;
       max-width: 70rem;
       z-index: 1;
+      border-radius: 12px;
     }
 
     .detail1,
@@ -43,99 +106,25 @@
       position: absolute;
       width: 10rem;
       height: auto;
+      border-radius: 8px;
     }
 
-    .detail1 {
-      top: 16%;
-      right: 21%;
-      z-index: 3;
+    .detail1 { top: 16%;  right: 21%; z-index: 3; }
+    .detail2 { bottom: 29%; right: 21%; z-index: 2; }
+    .detail3 { top: 60%;  left: 21%;  z-index: 2; }
+
+    @media (max-width: 766px) {
+      .detail1, .detail2, .detail3 { width: 5rem; }
+      .detail1 { top: -6%;  right: 2%; }
+      .detail2 { bottom: 27%; right: 2%; }
+      .detail3 { top: 46%; left: 2%; }
     }
 
-    .detail2 {
-      bottom: 29%;
-      right: 21%;
-      z-index: 2;
-    }
-
-    .detail3 {
-      top: 60%;
-      left: 21%;
-      z-index: 2;
-    }
-  }
-
-  @media (max-width: 766px) {
-    .image-row {
-      .detail1,
-      .detail2,
-      .detail3 {
-        width: 5rem;
-      }
-
-      .detail1 {
-        top: -6%;
-        right: 2%;
-      }
-
-      .detail2 {
-        bottom: 27%;
-        right: 2%;
-      }
-
-      .detail3 {
-        top: 46%;
-        left: 2%;
-      }
-    }
-  }
-
-  @media (min-width: 768px) and (max-width: 799px) {
-    .image-row {
-      .detail1,
-      .detail2,
-      .detail3 {
-        width: 10rem;
-      }
-
-      .detail1 {
-        top: -5%;
-        right: 2%;
-      }
-
-      .detail2 {
-        bottom: 25%;
-        right: 2%;
-      }
-
-      .detail3 {
-        top: 50%;
-        left: 3%;
-      }
-    }
-  }
-
-  @media (min-width: 800px) and (max-width: 1114px) {
-    .image-row {
-      .detail1,
-      .detail2,
-      .detail3 {
-        width: 10rem;
-      }
-
-      .detail1 {
-        top: -5%;
-        right: 2%;
-      }
-
-      .detail2 {
-        bottom: 28%;
-        right: 2%;
-      }
-
-      .detail3 {
-        top: 50%;
-        left: 3%;
-      }
+    @media (min-width: 768px) and (max-width: 1114px) {
+      .detail1, .detail2, .detail3 { width: 8rem; }
+      .detail1 { top: -5%;  right: 2%; }
+      .detail2 { bottom: 25%; right: 2%; }
+      .detail3 { top: 50%; left: 3%; }
     }
   }
 }

@@ -5,6 +5,15 @@ import ServicesSection from "./components/ServicesSection";
 
 import './Gamers.scss';
 
+const valueItems = [
+  { label: 'Strengthen audience connection' },
+  { label: 'Boost monetization opportunities' },
+  { label: 'Increase viewership revenue' },
+  { label: 'Identify popular game moments' },
+  { label: 'Drive audience-driven content strategy' },
+  { label: 'Increase follower retention' },
+];
+
 const Gamers = () => {
   return (
     <div>
@@ -13,16 +22,14 @@ const Gamers = () => {
       <ServicesSection />
 
       <div className="value-gamers">
-        <div className="row text-center">
-          <h5>VALUE TO YOUR BUSINESS</h5>
+        <div className="value-inner">
+          <span className="value-eyebrow">Value to your business</span>
+          <h2 className="value-heading">Why game studios &amp; streamers choose QQA</h2>
 
           <ul>
-            {['Strengthen audience connection', 'Boost monetization opportunities', 'Increase Viewership Revenue',
-              'Identify popular game', 'Drive audience-driven content strategy', 'Increase follower retention',
-            ].map((label: string) => (
-              <li>
-                <i className="pi pi-check" style={{ color: '#FF019B' }} />
-                &nbsp;&nbsp;
+            {valueItems.map(({ label }) => (
+              <li key={label}>
+                <i className="pi pi-check check-icon" />
                 {label}
               </li>
             ))}
@@ -32,15 +39,15 @@ const Gamers = () => {
 
       <Steps isGamer />
 
-      <div className="text-center">
-        <h4 className="m-0 p-0" style={{ color: 'rgb(255, 138, 55)', fontSize: '1.5rem', fontWeight: '400' }}>
+      <div className="gamer-disclaimer">
+        <p>
           Gameplay is used solely to showcase your game viewer testing capabilities and not for profit.
-        </h4>
+        </p>
       </div>
 
       <FeatureSection />
     </div>
-  )
-}
+  );
+};
 
 export default Gamers;

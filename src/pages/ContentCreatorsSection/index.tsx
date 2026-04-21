@@ -1,109 +1,102 @@
-// import { Button } from 'primereact/button';
-import beginners from '../../assets/img/c-beginners.png';
+import beginners   from '../../assets/img/c-beginners.png';
 import experienced from '../../assets/img/c-experienced.png';
-import expert from '../../assets/img/c-expert.png';
+import expert      from '../../assets/img/c-expert.png';
 import './ContentCreatorsSection.scss';
 
 const contentData = [
   {
+    tier: 'Beginner',
+    tierClass: 'creator-tier--beginner',
     title: 'Beginner Content Creator',
     image: beginners,
-    description:
-      'Kickstart your revenue gain using receive expert guidance from artificial intelligence to help make your content gain more likes, viewers, viewing time, and subscribers – AT LOW COST',
-    link: 'form.html',
+    description: 'Kickstart your revenue with AI guidance that helps your content gain more likes, viewers, watch time, and subscribers — at low cost.',
   },
   {
-    title: 'Experienced Content Creators',
+    tier: 'Experienced',
+    tierClass: 'creator-tier--experienced',
+    title: 'Experienced Content Creator',
     image: experienced,
-    description:
-      'Polish your content to perfection with precision analysis and recommendation tools to increase your subscribers, viewership, and revenue',
-    link: 'form.html',
+    description: 'Polish your content to perfection with precision analysis and recommendation tools to increase subscribers, viewership, and revenue.',
   },
   {
-    title: 'Expert Content Creators',
+    tier: 'Expert',
+    tierClass: 'creator-tier--expert',
+    title: 'Expert Content Creator',
     image: expert,
-    description:
-      'At a Minimal Cost - Increase your marketing & viewership using analytics and tools that major Ad Agency & Film Production pay millions of dollars to use for their pre and post film & media productions',
-    link: 'form.html',
+    description: 'At a minimal cost — use analytics that major ad agencies and film productions pay millions for, now accessible for your pre and post production.',
   },
 ];
 
 const leftList = [
-  'Pinpoint drop-off points before you post.',
-  'Live Audience Testing — our 1 million viewers are online ready to watch your video before you post.',
-  'Upload video & track reactions to your hook,.',
-  'Timeline Plugin for DaVinci — edit by attention.',
-  'AI GPT Editing —emotion design, cuts, audio, script, colors,.',
-  'Audience Behavior Dashboard — see reactions, attention spikes, drop-offs.',
-  'Save up to 30 hours per hour of footage.',
+  'Pinpoint drop-off points before you post',
+  'Live Audience Testing — 1M+ viewers ready instantly',
+  'Upload video & track reactions to your hook',
+  'Timeline Plugin for DaVinci — edit by attention',
+  'AI GPT Editing — emotion design, cuts, audio, script, colors',
+  'Audience Behavior Dashboard — reactions, attention spikes, drop-offs',
+  'Save up to 30 hours per hour of footage',
 ];
 
 const rightList = [
-  'Test with real viewers and track hook reactions.',
-  'AI GPT Assistant — get edit, hook, and pacing suggestions.',
-  'Audience Reaction Insights to Actor, Script, and Music designs.',
-  'See second by second attention and emotions.',
-  'Same-day reports — smarter edits, more views, faster.',
-  'Adobe Premiere Pro Compatible & DaVinci Resolve Compatible Analytics Integration.',
+  'Test with real viewers and track hook reactions',
+  'AI GPT Assistant — edit, hook, and pacing suggestions',
+  'Audience Reaction Insights to actor, script, and music designs',
+  'See second-by-second attention and emotions',
+  'Same-day reports — smarter edits, more views, faster',
+  'Adobe Premiere Pro &amp; DaVinci Resolve compatible',
 ];
 
 const ContentCreatorsSection = () => {
   return (
     <section className="content-creators-section">
-      <div className="text-center mb-8">
-        <h1 className='m-0 p-0'>
-          <span className="gold">Increase revenue</span> per video <br /> published to platforms
-        </h1>
-      </div>
+      <div className="creators-inner">
+        <div className="text-center">
+          <span className="creators-eyebrow">For Content Creators</span>
+          <h1 className="creators-heading">
+            <span className="gold">Increase revenue</span> per video<br />published to platforms
+          </h1>
+          <p className="creators-sub" style={{ margin: '0 auto' }}>
+            From first upload to viral hit — AI-powered audience intelligence at every level.
+          </p>
+        </div>
 
-      <div className="card-container">
-        {contentData.map((item) => (
-          <div className="creator-card flex flex-column justify-content-between" key={item.title}>
-            <div>
+        <div className="card-container">
+          {contentData.map((item) => (
+            <div className="creator-card" key={item.title}>
+              <span className={`creator-tier ${item.tierClass}`}>{item.tier}</span>
               <img src={item.image} alt={item.title} className="creator-img" />
-
-              <h3 className="text-pink-500">{item.title}</h3>
-
-              <p>{item.description}</p>
+              <h3 className="creator-title">{item.title}</h3>
+              <p className="creator-desc">{item.description}</p>
             </div>
-          </div>
-        ))}
-      </div>
-
-      <div className="flex justify-content-center mb-6">
-        {/* <a
-          href="https://portal.qqa.ai"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Button label="Start Now" className="btn-sign-up" />
-        </a> */}
+          ))}
+        </div>
       </div>
 
       <div className="service-section">
-        <div className="text-center">
-          <h6 className='m-0 p-0'>CONTENT CREATORS SERVICE</h6>
-          <p className="text-sm m-0 p-0">you will have the possibility to:</p>
-        </div>
+        <div className="service-inner">
+          <span className="service-eyebrow">Content Creator Services</span>
+          <h2 className="service-heading">Everything you get access to</h2>
+          <p className="service-sub">You will have the possibility to:</p>
 
-        <div className="flex justify-content-center flex-wrap gap-5 mt-5">
-          <ul>
-            {leftList.map((item) => (
-              <li key={item} className='flex gap-2'>
-                <i className="pi pi-check" style={{ color: '#FF019B' }} />
-                {item}
-              </li>
-            ))}
-          </ul>
+          <div className="service-lists">
+            <ul>
+              {leftList.map((item) => (
+                <li key={item}>
+                  <i className="pi pi-check check-icon" />
+                  {item}
+                </li>
+              ))}
+            </ul>
 
-          <ul>
-            {rightList.map((item) => (
-              <li key={item} className='flex gap-3'>
-                <i className="pi pi-check" style={{ color: '#FF019B' }} />
-                {item}
-              </li>
-            ))}
-          </ul>
+            <ul>
+              {rightList.map((item) => (
+                <li key={item}>
+                  <i className="pi pi-check check-icon" />
+                  <span dangerouslySetInnerHTML={{ __html: item }} />
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </section>

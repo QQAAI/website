@@ -1,90 +1,214 @@
 .content-creators-section {
-  padding: 2rem 1rem 0 1rem;
+  padding: 80px 32px 0;
+  color: white;
 
-  h1 {
-    font-size: 2.5rem;
-    line-height: 1.4;
+  .creators-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  // ── Hero ──────────────────────────────────────────────────
+  .creators-eyebrow {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #FF019B;
+    margin-bottom: 12px;
+  }
+
+  .creators-heading {
+    font-size: clamp(32px, 5vw, 54px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: #ffffff;
+    margin: 0 0 16px;
+    line-height: 1.1;
   }
 
   .gold {
-    background: linear-gradient(45deg, #FF019B, #8f1289);
+    background: linear-gradient(90deg, #FF019B, #8f1289);
     -webkit-background-clip: text;
-    color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
+  .creators-sub {
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.6;
+    margin: 0;
+    max-width: 540px;
+  }
+
+  // ── Creator Cards ─────────────────────────────────────────
   .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 4rem;
-    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 64px;
+    margin-bottom: 48px;
 
-    .creator-card {
-      border-radius: 15px;
-      padding: 2rem;
-      background-color: rgba(255, 255, 255, 0.05);
-      margin-top: 3rem;
-      text-align: center;
-      width: 100%;
-      max-width: 350px;
-      position: relative;
-
-      .creator-img {
-        margin-top: -102px;
-        width: 17rem;
-        height: auto;
-      }
-
-      h3 {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-      }
-
-      p {
-        font-size: 0.95rem;
-        margin-bottom: 1.5rem;
-      }
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+      max-width: 420px;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
-  .btn-sign-up {
-    width: 20rem;
-    font-size: 2rem;
-    background: linear-gradient(270deg, #FF019B, #8f1289, #5900ff, #FF019B);
-    background-size: 300% 300%;
-    animation: gradientMove 5s ease infinite;
-    border: none;
-    color: #fff;
-    transition: transform 0.3s ease;
+  .creator-card {
+    position: relative;
+    border-radius: 20px;
+    padding: 28px 24px 24px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: center;
+    overflow: visible;
+    transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 
     &:hover {
-      transform: scale(1.05);
+      border-color: rgba(255, 1, 155, 0.3);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(255, 1, 155, 0.1);
     }
   }
 
-  .service-section {
-    background-color: #212121;
-    padding: 4rem 1rem;
-    color: #ffffff;
+  .creator-tier {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    padding: 4px 14px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 
-    h6 {
-      color: rgb(255, 1, 155);
+    &--beginner {
+      background: rgba(20, 184, 166, 0.15);
+      border: 1px solid rgba(20, 184, 166, 0.35);
+      color: #14b8a6;
+    }
+
+    &--experienced {
+      background: rgba(255, 1, 155, 0.12);
+      border: 1px solid rgba(255, 1, 155, 0.35);
+      color: #FF019B;
+    }
+
+    &--expert {
+      background: rgba(139, 92, 246, 0.12);
+      border: 1px solid rgba(139, 92, 246, 0.35);
+      color: #8b5cf6;
+    }
+  }
+
+  .creator-img {
+    width: 80%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 12px;
+    margin: 16px auto 20px;
+    display: block;
+  }
+
+  .creator-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 10px;
+  }
+
+  .creator-desc {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  // ── Service section ───────────────────────────────────────
+  .service-section {
+    background: linear-gradient(135deg, rgba(27, 6, 44, 0.95) 0%, rgba(3, 5, 29, 0.98) 100%);
+    padding: 72px 32px;
+    border-top: 1px solid rgba(255, 1, 155, 0.12);
+    margin: 0 -32px;
+
+    .service-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .service-eyebrow {
+      font-size: 11px;
       font-weight: 700;
-      letter-spacing: 4px;
-      padding: 0;
-      margin: 0;
+      letter-spacing: 3px;
+      color: #FF019B;
+      text-transform: uppercase;
+      display: block;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .service-heading {
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 700;
+      color: #ffffff;
+      text-align: center;
+      margin: 0 0 10px;
+      letter-spacing: -0.01em;
+    }
+
+    .service-sub {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.4);
+      text-align: center;
+      margin: 0 0 48px;
+    }
+
+    .service-lists {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px 48px;
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
     }
 
     ul {
       list-style: none;
       padding-left: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
 
-      li {
-        margin-bottom: 1rem;
-        display: flex;
-        align-items: center;
-        font-size: 0.95rem;
+    li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 14.5px;
+      color: rgba(255, 255, 255, 0.75);
+      padding: 14px 16px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 10px;
+      transition: border-color 0.2s, background 0.2s;
+
+      &:hover {
+        border-color: rgba(255, 1, 155, 0.2);
+        background: rgba(255, 1, 155, 0.03);
+      }
+
+      .check-icon {
+        flex-shrink: 0;
+        color: #FF019B;
+        margin-top: 1px;
       }
     }
   }

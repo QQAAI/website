@@ -2,41 +2,265 @@
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-bottom: 10px;
-  padding-top: 30px;
+  padding-bottom: 0;
+  padding-top: 64px;
 
-  .title {
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 20px;
+  // ── CTA buttons ─────────────────────────────────────────
+  .hero-ctas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 28px 0 32px;
+  }
 
-    .ask {
-      background: linear-gradient(45deg, #FF019B, #8f1289);
-      -webkit-background-clip: text;
-      color: transparent;
-      font-size: 48px;
+  .cta-primary {
+    display: inline-flex;
+    align-items: center;
+    padding: 14px 32px;
+    background: linear-gradient(135deg, #FF019B, #8f1289);
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 700;
+    border-radius: 10px;
+    text-decoration: none;
+    letter-spacing: -0.01em;
+    transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 24px rgba(255, 1, 155, 0.35);
+
+    &:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(255, 1, 155, 0.45);
     }
   }
 
+  .cta-secondary {
+    display: inline-flex;
+    align-items: center;
+    padding: 14px 24px;
+    background: rgba(255, 255, 255, 0.07);
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.12);
+      color: #ffffff;
+    }
+  }
+
+  // ── Social proof bar ─────────────────────────────────────
+  .social-proof {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+  }
+
+  .proof-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 32px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+
+    &:last-child { border-right: none; }
+
+    strong {
+      font-size: 26px;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      background: linear-gradient(90deg, #FF019B, #c026d3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    span {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.4);
+      font-weight: 500;
+      margin-top: 4px;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 480px) {
+      padding: 12px 16px;
+      border-right: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      &:last-child { border-bottom: none; }
+    }
+  }
+
+  // ── Hero badge ───────────────────────────────────────────
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    background: rgba(255, 1, 155, 0.1);
+    border: 1px solid rgba(255, 1, 155, 0.25);
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #FF019B;
+    margin-bottom: 28px;
+
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #FF019B;
+    }
+  }
+
+  // ── Titles ───────────────────────────────────────────────
+  .title {
+    font-size: clamp(36px, 5vw, 60px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: #ffffff;
+    line-height: 1.1;
+    margin: 0 0 16px;
+
+    .ask {
+      background: linear-gradient(90deg, #FF019B, #8f1289);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+
+  .hero-stat {
+    display: inline-block;
+    font-size: clamp(18px, 2.5vw, 24px);
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 8px;
+    line-height: 1.4;
+
+    .ask {
+      background: linear-gradient(90deg, #FF019B, #c026d3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+
+  .hero-cta-line {
+    font-size: clamp(18px, 2.5vw, 26px);
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 24px;
+  }
+
+  .hero-subtext {
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+
+  // ── Video ────────────────────────────────────────────────
+  .demo-video {
+    margin: 48px 0;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 16px;
+    box-shadow: 0 0 48px rgba(255, 1, 155, 0.3), 0 24px 80px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 1, 155, 0.2);
+  }
+
+  // ── Ask/Answer headline ──────────────────────────────────
+  .ask-answer-heading {
+    font-size: clamp(24px, 3.5vw, 38px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    margin-bottom: 4px;
+
+    .ask {
+      background: linear-gradient(90deg, #FF019B, #8f1289);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+
+  // ── Secondary section ────────────────────────────────────
+  .secondary-section {
+    margin-top: 80px;
+    padding: 64px 32px;
+    background: rgba(255, 255, 255, 0.02);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 24px 24px 0 0;
+
+    .title-secondary {
+      font-size: clamp(28px, 4vw, 44px);
+      color: #ffffff;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .subtitle-secondary {
+      font-size: 18px;
+      color: #ffaa00;
+      margin-bottom: 40px;
+      font-weight: 500;
+    }
+
+    .features-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px 32px;
+      list-style: none;
+      padding-left: 0;
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: left;
+
+      @media (max-width: 640px) {
+        grid-template-columns: 1fr;
+      }
+
+      li {
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.75);
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 14px 18px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        border-radius: 10px;
+        transition: border-color 0.2s, background 0.2s;
+
+        &:hover {
+          border-color: rgba(255, 1, 155, 0.2);
+          background: rgba(255, 1, 155, 0.04);
+        }
+      }
+    }
+  }
+
+  // ── Legacy / kept for safety ──────────────────────────────
   .subtitle {
     font-size: 24px;
     color: #dddddd;
     margin-bottom: 30px;
-
-    .ask {
-      background: linear-gradient(45deg, #FF019B, #8f1289);
-      -webkit-background-clip: text;
-      color: transparent;
-      font-size: 48px;
-    }
-  }
-
-  .demo-video {
-    margin: 3rem 0;
-    width: 100%;
-    max-width: 900px;
-    border-radius: 1rem;
-    box-shadow: 0 0 20px rgba(255, 1, 155, 0.5);
   }
 
   .benefits {
@@ -46,9 +270,7 @@
     list-style: none;
     padding-left: 0;
 
-    li {
-      margin-bottom: 10px;
-    }
+    li { margin-bottom: 10px; }
   }
 
   .btn-sign-up {
@@ -61,51 +283,13 @@
     color: #fff;
     transition: transform 0.3s ease;
 
-    &:hover {
-      transform: scale(1.05);
-    }
+    &:hover { transform: scale(1.05); }
   }
 
   @keyframes gradientMove {
-    0% {
-      background-position: 0% 50%;
-    }
-
-    50% {
-      background-position: 100% 50%;
-    }
-
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-
-  .secondary-section {
-    margin-top: 60px;
-
-    .title-secondary {
-      font-size: 42px;
-      color: #ffffff;
-      font-weight: 700;
-      margin-bottom: 15px;
-    }
-
-    .subtitle-secondary {
-      font-size: 22px;
-      color: #ffaa00;
-      margin-bottom: 25px;
-    }
-
-    .features-list {
-      font-size: 18px;
-      color: #dddddd;
-      list-style: none;
-      padding-left: 0;
-
-      li {
-        margin-bottom: 10px;
-      }
-    }
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
 
   .image-stack {
@@ -119,25 +303,8 @@
       display: block;
     }
 
-    .detail1 {
-      width: 160px;
-      position: absolute;
-      top: 20px;
-      left: 67%;
-    }
-
-    .detail2 {
-      width: 160px;
-      position: absolute;
-      top: 200px;
-      left: 67%
-    }
-
-    .detail3 {
-      width: 160px;
-      position: absolute;
-      top: 250px;
-      left: 25%;
-    }
+    .detail1 { width: 160px; position: absolute; top: 20px;  left: 67%; }
+    .detail2 { width: 160px; position: absolute; top: 200px; left: 67%; }
+    .detail3 { width: 160px; position: absolute; top: 250px; left: 25%; }
   }
 }

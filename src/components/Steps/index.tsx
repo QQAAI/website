@@ -12,25 +12,25 @@ const Steps = ({ img1, img2, img3, isGamer }: StepsProps) => {
     {
       image: gamer_1,
       title: 'Upload Video',
-      description: 'All you need to do is upload a 30 second clip or more of your game play.',
+      description: 'All you need to do is upload a 30-second clip or more of your gameplay.',
     },
     {
       image: gamer_2,
-      title: 'Send the invites',
+      title: 'Send the Invites',
       description: (
         <>
-          You can DM invites to your <span className="highlight">Followers</span> or use our{' '}
-          <span className="highlight">Internal Testers</span> and they can start viewing{' '}
-          <span className="highlight font-bold">instantly</span> for instant results.
+          DM invites to your <span className="highlight">Followers</span> or use our{' '}
+          <span className="highlight">Internal Testers</span> — they start viewing{' '}
+          <span className="highlight font-bold">instantly</span>.
         </>
       ),
     },
     {
       image: gamer_3,
-      title: 'Results',
+      title: 'Get Results',
       description: (
         <>
-          As each invited viewer completes a test viewing, you receive notification for{' '}
+          As each viewer completes a test, you get{' '}
           <span className="highlight font-bold">instant</span> results in your Report Dashboard.
         </>
       ),
@@ -41,17 +41,17 @@ const Steps = ({ img1, img2, img3, isGamer }: StepsProps) => {
     {
       image: gamer_1,
       title: 'Upload Video',
-      description: 'All you need to do is upload a video clip.',
+      description: 'Upload any video clip you want to test with a live audience.',
     },
     {
       image: gamer_2,
       title: 'Request Attention Test',
-      description: 'Participants Watch Video Clip Instantly.',
+      description: 'Participants watch your clip instantly. No scheduling, no waiting.',
     },
     {
       image: gamer_3,
-      title: 'Results',
-      description: 'As each viewer completes viewing clip, your results are instantly in your MY STUDIO page.'
+      title: 'Get Results',
+      description: 'Results land in your Studio page as each viewer finishes watching.',
     },
   ];
 
@@ -59,27 +59,29 @@ const Steps = ({ img1, img2, img3, isGamer }: StepsProps) => {
 
   return (
     <div id="general-section">
-      <div className="text-center">
-        <h1>
-          How to <span className="gold">Live Audience Test Videos?</span>
-        </h1>
-      </div>
+      <div className="steps-inner">
+        <div className="text-center">
+          <span className="steps-eyebrow">How it works</span>
+          <h2 className="steps-heading">
+            Live Audience Test in{' '}
+            <span style={{ background: 'linear-gradient(90deg, #FF019B, #8f1289)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+              3 simple steps
+            </span>
+          </h2>
+        </div>
 
-      <div className="container-fluid mt-8">
-        <div className="flex flex-wrap justify-content-center gap-4">
+        <div className="steps-grid">
           {steps.map((step: StepGamer, index: number) => (
-            <div
-              key={index}
-              className="flex flex-column align-items-center text-center px-4 py-5 step-card"
-            >
+            <div key={index} className="step-card">
+              <span className="step-number">{index + 1}</span>
+
               <img src={step.image} alt={step.title} className="step-image" />
 
-              <h3 className="text-pink m-0 mt-3" style={{ height: '75px' }}>{step.title}</h3>
-
-              <h5 className="mt-3" style={{ height: '115px' }}>{step.description}</h5>
+              <h3 className="step-title">{step.title}</h3>
+              <p className="step-desc">{step.description}</p>
 
               {stepImages[index] && (
-                <img src={stepImages[index]} alt={step.title} width='100%' />
+                <img src={stepImages[index]} alt={step.title} className="step-screen" />
               )}
             </div>
           ))}

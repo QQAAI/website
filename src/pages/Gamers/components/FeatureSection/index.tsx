@@ -16,7 +16,7 @@ import frameMobile4 from '../../../../assets/img/frame_4_4_gamer.webp';
 const FeatureSection = () => {
   const [index, setIndex] = useState(0);
   const desktopFrames = [frame1, frame2, frame3, frame4];
-  const mobileFrames = [frameMobile1, frameMobile2, frameMobile3, frameMobile4];
+  const mobileFrames  = [frameMobile1, frameMobile2, frameMobile3, frameMobile4];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -26,51 +26,49 @@ const FeatureSection = () => {
   }, []);
 
   return (
-    <section id="feature-gamer" className="my-6">
-      <div>
-        <div className="text-center mb-4">
-          <h5 className="font-bold m-0 p-0">CORE FEATURES</h5>
-          <h1 className="text-3xl font-bold m-0 p-0">Why choose QOA.Al Insights for Gaming Platform?</h1>
-        </div>
+    <section id="feature-gamer">
+      <div className="feature-inner text-center">
+        <span className="feature-eyebrow">Core Features</span>
+        <h2 className="feature-heading">Why choose QQA AI Insights for Gaming?</h2>
 
+        {/* Desktop */}
         <div className="hidden md:flex justify-content-center">
           <div className="relative w-full max-w-6xl flex justify-content-center">
             {desktopFrames.map((img, i) => (
               <img
                 key={i}
                 src={img}
-                width={1300}
-                height={600}
-                alt={`Frame ${i + 1}`}
+                alt={`Feature ${i + 1}`}
                 className={classNames(
-                  'absolute transition-opacity duration-1000 border-round-xl',
-                  index === i
-                    ? 'opacity-100 animate__animated animate__fadeIn'
-                    : 'opacity-0'
+                  'absolute transition-opacity duration-1000',
+                  index === i ? 'opacity-100 animate__animated animate__fadeIn' : 'opacity-0'
                 )}
               />
             ))}
           </div>
         </div>
 
-        <div className="flex md:hidden justify-content-center flex justify-content-center">
+        {/* Mobile */}
+        <div className="flex md:hidden justify-content-center">
           <div className="relative w-full max-w-xs">
             {mobileFrames.map((img, i) => (
               <img
                 key={i}
                 src={img}
-                width={1300}
-                height={600}
-                alt={`Mobile Frame ${i + 1}`}
+                alt={`Feature mobile ${i + 1}`}
                 className={classNames(
-                  'absolute transition-opacity duration-1000 border-round-xl',
-                  index === i
-                    ? 'opacity-100 animate__animated animate__fadeIn'
-                    : 'opacity-0'
+                  'absolute transition-opacity duration-1000',
+                  index === i ? 'opacity-100 animate__animated animate__fadeIn' : 'opacity-0'
                 )}
               />
             ))}
           </div>
+        </div>
+
+        <div className="feature-dots">
+          {desktopFrames.map((_, i) => (
+            <span key={i} className={classNames('dot', { active: index === i })} />
+          ))}
         </div>
       </div>
     </section>

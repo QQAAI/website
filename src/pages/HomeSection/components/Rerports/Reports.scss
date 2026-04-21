@@ -1,51 +1,94 @@
 .reports {
+  padding: 80px 32px;
+
+  .reports-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .reports-eyebrow {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #FF019B;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
   h1 {
-    font-size: 42px;
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
     color: #ffffff;
-    font-weight: 700;
-    padding: 0;
-    margin: 0;
+    margin: 0 0 12px;
+    line-height: 1.2;
   }
 
-  h5 {
-    color: rgb(255, 1, 155);
-    font-weight: 700;
-    letter-spacing: 4px;
-    padding: 0;
-    margin: 0;
+  .reports-sub {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.45);
+    margin: 0 0 32px;
+    line-height: 1.6;
   }
 
-  h6 {
-    font-size: 1rem;
-    color: rgb(211, 211, 211);
-    font-weight: 300;
-  }
-
+  // ── Report type pills ────────────────────────────────────
   .container-buttons {
-    div {
-      border-radius: 5px;
-      border: solid 1px #fff;
-      padding: 0.4rem 1rem;
-      margin: 0.2rem;
-      width: 14rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 32px;
 
-      &:hover {
-        cursor: pointer;
-        background-color: rgb(232, 232, 232);
-        color: black;
+    .report-pill {
+      padding: 8px 20px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.04);
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+      user-select: none;
+
+      &:hover,
+      &.active {
+        border-color: rgba(255, 1, 155, 0.5);
+        background: rgba(255, 1, 155, 0.1);
+        color: #FF019B;
       }
     }
   }
 
-  p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #ddd;
+  .reports-description {
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.5);
+    max-width: 600px;
+    margin: 0 auto 56px;
+  }
+
+  // ── Images ───────────────────────────────────────────────
+  .reports-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
   }
 
   .img-fluid {
     width: 100%;
-    max-width: 600px;
+    max-width: 560px;
     height: auto;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    box-shadow: 0 16px 64px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 24px 80px rgba(255, 1, 155, 0.12);
+    }
   }
 }

@@ -5,47 +5,24 @@ import { Sidebar } from 'primereact/sidebar';
 import { classNames } from 'primereact/utils';
 import Logo from '../../assets/img/qqa_logo_nav.webp';
 import './Navbar.scss';
-// import type { ActionButton } from './interface';
+
+const navLinks = [
+  { path: '/',                label: 'Home' },
+  { path: '/content-creator', label: 'Content Creators' },
+  { path: '/gamers',          label: 'Gamers' },
+  { path: '/about-us',        label: 'About us' },
+  { path: '/contact',         label: 'Contact' },
+];
 
 const Navbar = () => {
   const location = useLocation();
   const [visible, setVisible] = useState(false);
 
-  const navLinks = [
-    { path: '/', label: 'Home' },
-    { path: '/content-creator', label: 'Content Creators' },
-    { path: '/gamers', label: 'Gamers' },
-    { path: '/about-us', label: 'About us' },
-    { path: '/contact', label: 'Contact' },
-  ];
-
-  // const actionButtons: ActionButton[] = [
-  //   { path: 'https://portal.qqa.ai', label: 'Log In' },
-  //   { path: 'https://portal.qqa.ai/#/sign-up', label: 'Sign Up' },
-  // ];
-
-  // const renderActionButtons = (mode: 'desktop' | 'mobile') =>
-  //   actionButtons.map((btn) =>
-  //     <a
-  //       key={btn.path}
-  //       href={btn.path}
-  //       target="_blank"
-  //       rel="noopener noreferrer"
-  //       className={mode === 'mobile' ? 'w-full' : ''}
-  //     >
-  //       <Button
-  //         label={btn.label}
-  //         className={classNames('p-button-sm', 'custom-btn', {
-  //           'w-full': mode === 'mobile',
-  //         })}
-  //       />
-  //     </a>
-  //   );
-
   return (
     <>
       <nav className="navbar-container px-4">
         <div className="navbar-inner flex align-items-center justify-content-between relative">
+
           <Link to="/" className="navbar-logo z-1">
             <img src={Logo} alt="QQA Logo" width={186} height={38} />
           </Link>
@@ -55,9 +32,7 @@ const Navbar = () => {
               <li key={link.path}>
                 <Link
                   to={link.path}
-                  className={classNames('nav-link text-base', {
-                    active: location.pathname === link.path,
-                  })}
+                  className={classNames('nav-link', { active: location.pathname === link.path })}
                 >
                   {link.label}
                 </Link>
@@ -65,8 +40,14 @@ const Navbar = () => {
             ))}
           </ul>
 
+          {/* Desktop CTAs */}
           <div className="hidden md:flex align-items-center gap-2 z-1 navbar-actions">
-            {/* {renderActionButtons('desktop')} */}
+            <a href="https://portal-qqa.ai" target="_blank" rel="noopener noreferrer" className="nav-login">
+              Log In
+            </a>
+            <a href="https://portal-qqa.ai/#/sign-up" target="_blank" rel="noopener noreferrer" className="nav-signup">
+              Start Free
+            </a>
           </div>
 
           <Button
@@ -78,28 +59,30 @@ const Navbar = () => {
         </div>
       </nav>
 
-      <Sidebar
-        visible={visible}
-        onHide={() => setVisible(false)}
-        className="navbar-sidebar md:hidden"
-      >
-        <ul className="list-none p-0">
+      {/* Mobile sidebar */}
+      <Sidebar visible={visible} onHide={() => setVisible(false)} className="navbar-sidebar md:hidden">
+        <ul className="list-none p-0 mb-4">
           {navLinks.map((link) => (
-            <li key={link.path} className="mb-3">
+            <li key={link.path} className="mb-2">
               <Link
                 to={link.path}
-                className="nav-link text-base block"
+                className={classNames('nav-link block', { active: location.pathname === link.path })}
                 onClick={() => setVisible(false)}
               >
                 {link.label}
               </Link>
             </li>
           ))}
-
-          <div className="mt-4 flex flex-column gap-2">
-            {/* {renderActionButtons('mobile')} */}
-          </div>
         </ul>
+
+        <div className="flex flex-column gap-2">
+          <a href="https://portal.qqa.ai" target="_blank" rel="noopener noreferrer" className="nav-login text-center">
+            Log In
+          </a>
+          <a href="https://portal.qqa.ai/#/sign-up" target="_blank" rel="noopener noreferrer" className="nav-signup text-center">
+            Start Free
+          </a>
+        </div>
       </Sidebar>
     </>
   );

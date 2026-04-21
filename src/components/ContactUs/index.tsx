@@ -1,32 +1,35 @@
 import './ContactUs.scss';
 
+const EmailIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <rect width="20" height="16" x="2" y="4" rx="2"/>
+    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+  </svg>
+);
+
 const ContactUs = () => {
   return (
     <div className="contact-us-container">
-      <div className="contact-header text-center">
-        <h1 className='p-0 m-0'>Contact Us</h1>
+      <div className="contact-inner">
+        <span className="contact-eyebrow">Get in touch</span>
 
-        <p>
-          Ready to start exploring the power of AI in your industry? Complete the contact form now and take the
-          first step towards innovative solutions and exceptional results.
+        <h2 className="contact-heading">
+          Ready to know what your audience really thinks?
+        </h2>
+
+        <p className="contact-sub">
+          Reach out to our team. We'll help you set up your first audience test and get insights before your next upload.
         </p>
-      </div>
 
-      <div className="form-embed flex justify-content-center">
-        {/* <iframe
-          id="JotFormIFrame-241815056613655"
-          title="Quick Quality Analysis"
-          allow="geolocation; microphone; camera; fullscreen"
-          allowTransparency={true}
-          src="https://form.jotform.com/241815056613655"
-          frameBorder="0"
-          scrolling="yes"
-        />
-        <script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
-        <script>
-          {`window.jotformEmbedHandler("iframe[id='JotFormIFrame-241815056613655']", "https://form.jotform.com/")`}
-        </script> */}
-        <h1 className='p-0 m-0'>support@roboticaxai.com</h1>
+        <a href="mailto:support@roboticaxai.com" className="contact-card">
+          <div className="contact-icon">
+            <EmailIcon />
+          </div>
+          <div className="contact-email-text">
+            <span>Email us</span>
+            <strong>support@roboticaxai.com</strong>
+          </div>
+        </a>
       </div>
     </div>
   );

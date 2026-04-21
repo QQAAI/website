@@ -1,9 +1,7 @@
 import { useNavigate } from 'react-router-dom';
-
 import { Dropdown } from 'primereact/dropdown';
-
-import instagram from '../../assets/img/instagram.svg'
-
+import instagram from '../../assets/img/instagram.svg';
+import Logo from '../../assets/img/qqa_logo_nav.webp';
 import './Footer.scss';
 
 const legalOptions = [
@@ -25,38 +23,49 @@ const Footer = () => {
   };
 
   return (
-    <section className="footer">
-      <div className="container flex flex-column md:flex-row justify-content-between align-items-center py-3 gap-4">
-        {/* Copyright */}
-        <p className="m-0 px-4 text-sm text-center md:text-left" style={{ color: 'rgb(135, 135, 135)' }}>
-          @Copyright 2025 QQA AI Studio
-        </p>
+    <footer className="footer">
+      <div className="footer-inner">
+        <div className="footer-top">
+          <div className="footer-brand">
+            <img src={Logo} alt="QQA Logo" width={140} height={28} style={{ objectFit: 'contain' }} />
+            <span className="footer-tagline">AI-Powered Audience Intelligence</span>
+          </div>
 
-        <div className="flex gap-5">
-          {/* Redes sociales */}
-          <div className="flex align-items-center justify-content-center gap-3">
+          <div className="footer-links">
+            <a href="/" className="footer-link">Home</a>
+            <a href="/content-creator" className="footer-link">Content Creators</a>
+            <a href="/gamers" className="footer-link">Gamers</a>
+            <a href="/about-us" className="footer-link">About Us</a>
+            <a href="/contact" className="footer-link">Contact</a>
+          </div>
+        </div>
+
+        <div className="footer-bottom">
+          <p className="footer-copy">© 2025 QQA AI Studio. All rights reserved.</p>
+
+          <div className="footer-social">
             <a
               href="https://www.instagram.com/qqa.ai.creators/"
               target="_blank"
               rel="noopener noreferrer"
               className="circle-background"
+              aria-label="Instagram"
             >
-              <img src={instagram} alt="Instagram logo" width={24} height={24} />
+              <img src={instagram} alt="Instagram" width={18} height={18} />
             </a>
-          </div>
 
-          {/* Legal dropdown */}
-          <Dropdown
-            value={null}
-            options={legalOptions}
-            onChange={handleSelect}
-            placeholder="Legal"
-            className="legal-dropdown mx-4"
-            dropdownIcon="pi pi-chevron-down"
-          />
+            <Dropdown
+              value={null}
+              options={legalOptions}
+              onChange={handleSelect}
+              placeholder="Legal"
+              className="legal-dropdown"
+              dropdownIcon="pi pi-chevron-down"
+            />
+          </div>
         </div>
       </div>
-    </section>
+    </footer>
   );
 };
 
