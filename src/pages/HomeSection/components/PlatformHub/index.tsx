@@ -6,8 +6,8 @@ const ArrowIcon = () => (
   </svg>
 );
 
-// const PORTAL_URL = 'https://www.portal-qqa.ai/#/sign-in';
-const PORTAL_URL = 'http://localhost:5173/#/sign-in';
+const PORTAL_URL = 'https://www.portal-qqa.ai/#/sign-in';
+// const PORTAL_URL = 'http://localhost:5173/#/sign-in';
 
 const tiles = [
   {
